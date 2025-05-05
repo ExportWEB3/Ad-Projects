@@ -13,14 +13,14 @@ export function LandingComponent() {
             <div className='w-full h-full flex items-center'>
             <img src="\src\Images\Social.jpg" className="social rounded-lg" alt="" />
             <div className='w-1/2 h-80 ml-16'>
-            <h1 className='font-bold fontR font-root wordSpacing text-fuchsia-950'>Save time and get REAL</h1>
-            <h1 className='font-bold fontR font-root wordSpacing text-fuchsia-950 '>results on social media.</h1>
+            <h1 className='font-bold fontR font-root wordSpacing text-gray-800'>Save time and get REAL</h1>
+            <h1 className='font-bold fontR font-root wordSpacing text-gray-800 '>results on social media.</h1>
             <h1 className='font-bold fontR font-root wordSpacing text-red-700 '>Tildette makes it easy.</h1>
 
             <div className='w-3/4 h-20 mt-10 flex items-center space-x-10'>
             <Button
             btnText="Get Started"
-            className="w-48 h-14 text-xl bg-fuchsia-950 rounded-xl font-semibold hover:bg-fuchsia-800"
+            className="w-48 h-14 text-xl bg-gray-800 rounded-xl text-white font-semibold hover:bg-gray-700"
             type="button"
             onClick={() => {}}
             >x</Button>
@@ -112,7 +112,7 @@ export function LandingComponent() {
 
                     <Button
                     btnText="Read the Report"
-                    className="w-48 h-14 text-xl bg-fuchsia-950 rounded-xl font-semibold hover:bg-fuchsia-800"
+                    className="w-48 h-12 text-xl bg-gray-800 rounded-xl text-white font-semibold hover:bg-gray-700"
                     type="button"
 
                     >x</Button>
@@ -120,9 +120,145 @@ export function LandingComponent() {
                 <img src="\src\Images\brand.jpg" className='w-1/2' />
             </div>
 
-            <div className='w-full h-40 mt-5 flex flex-col items-center justify-center space-y-5 fade-up'>
-                <h2 className='text-4xl font-root text-gray-800 font-semibold'>Save time, simplify, and grow faster on social media</h2>
-                <p className='text-xl text-gray-800 font-root'>Hootsuite is designed to help you manage social media faster, smarter, and with way less effort. </p>
+            <div className='w-full h-40 mt-28 flex flex-col items-center justify-center space-y-5 fade-up'>
+                <div className='w-1/2 h-fit'>
+                <h2 className='text-4xl font-root text-gray-800 font-semibold text-center'>Save time, simplify, and grow faster on social media</h2>
+                </div>
+                <p className='text-xl text-gray-800 font-root'>Tildette is designed to help you manage social media faster, smarter, and with way less effort. </p>
+            </div>
+
+            <div className='w-full h-80 flex space-x-10 mt-14 fade-up'>
+                <div className='w-1/2 h-full bg-gray-400 overflow-hidden rounded-lg' >
+                <img src="\src\Images\schedule.png" className='w-full' />
+                </div>
+
+                <div className='w-1/2 h-full space-y-8'>
+                <div className='w-11/12 h-fit'>
+                <h1 className='text-4xl font-bold text-gray-800 font-root'>Save hours posting, creating, and analyzing content</h1>
+                </div>
+
+                    <p className='text-base text-gray-800 font-root'>Do you know what the best social strategies have in common? 
+                        Or what qualities drive social media performance? And how you can apply them to your organization? 
+                        Dig into our Social Media Trends 2025 report for insights that'll help you drive action and make a real business impact.
+                    </p>
+
+                    <Button
+                    btnText="Learn more"
+                    className="w-36 h-12 text-xl border-gray-800 text-gray-800 border bg-transparent rounded-xl font-semibold hover:bg-gray-200"
+                    type="button"
+                    >x</Button>
+                </div>
+            </div>
+
+            <div className='w-full h-80 mt-36 space-x-10 flex fade-up'>
+                <div className='w-1/2 h-full space-y-8'>
+                <div className='w-11/12 h-fit'>
+                <h1 className='text-4xl font-bold text-gray-800 font-root'>Boost engagement, reach, and follower count with less effort</h1>
+                </div>
+
+                    <p className='text-base text-gray-800 font-root'>See the content that brings in the most engagement and revenue and measure how you’re performing against your competitors. 
+                        Plus, get personalized suggestions for how to win in your industry.
+                         And, with reports that show you the best time to post for every network, you can say goodbye to hop-scotching between network tabs for good.
+                    </p>
+
+                    <div className='w-3/4 h-12 flex items-center'>
+                    <Button
+                    btnText="Try it for free"
+                    className="w-36 h-12 text-base bg-gray-800 text-white border rounded-xl font-semibold hover:bg-gray-600"
+                    type="button"
+                    >x</Button>
+
+                    <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer ml-5 text-base'>Learn more</p>
+                    </div>
+                </div>
+
+                <div className='w-1/2 h-full overflow-hidden' >
+                <img src="\src\Images\report.jpg" className='w-full rounded-lg' />
+                </div>
+            </div>
+
+            <div className='w-full h-80 mt-36 space-x-10 flex fade-up'>
+            <div className='w-1/2 h-full overflow-hidden' >
+                <img src="\src\Images\message-send.png" className='w-full rounded-lg' />
+                </div>
+
+                <div className='w-1/2 h-full space-y-8'>
+                <div className='w-11/12 h-fit'>
+                <h1 className='text-4xl font-bold text-gray-800 font-root'>Deliver a better customer experience and keep your inbox tidy</h1>
+                </div>
+
+                    <p className='text-base text-gray-800 font-root'>Reduce the clutter and eliminate DM dread with a unified social media inbox.
+                         Reply to comments and messages across platforms in one convenient hub and never leave your followers on read again.
+                         Cut your team’s message volume with saved replies or level up with our AI chatbot add-on. 
+                    </p>
+
+                    <div className='w-3/4 h-12 flex items-center'>
+                    <Button
+                    btnText="Learn more"
+                    className="w-36 h-12 text-xl border-gray-800 text-gray-800 border bg-transparent rounded-xl font-semibold hover:bg-gray-200"
+                    type="button"
+                    >x</Button>
+                    </div>
+                </div>
+            </div>
+
+            <div className='w-full h-80 mt-36 space-x-10 flex fade-up'>
+                <div className='w-1/2 h-full space-y-8'>
+                <div className='w-11/12 h-fit'>
+                <h1 className='text-4xl font-bold text-gray-800 font-root'>Safeguard your reputation and never miss a chance to engage</h1>
+                </div>
+
+                    <p className='text-base text-gray-800 font-root'>Keep an eye on what people are saying about your brand or industry with social listening tools.
+                         Track mentions and conversations to find opportunities to engage, discover new trends, or get ahead of feedback.
+                         Plus, easily suspend scheduled posts in case of a potential crisis or unexpected opportunity.
+                    </p>
+
+                    <div className='w-3/4 h-12 flex items-center'>
+                    <Button
+                    btnText="Learn more"
+                    className="w-36 h-12 text-xl border-gray-800 text-gray-800 border bg-transparent rounded-xl font-semibold hover:bg-gray-200"
+                    type="button"
+                    >x</Button>
+
+                    </div>
+                </div>
+
+                <div className='w-1/2 h-full overflow-hidden' >
+                <img src="\src\Images\suspend-posts.png" className='w-full rounded-lg' />
+                </div>
+            </div>
+
+            <div className='w-full h-80 mt-36 space-x-10 flex fade-up'>
+            <div className='w-1/2 h-full overflow-hidden' >
+                <img src="\src\Images\metric.png" className='w-full rounded-lg' />
+                </div>
+
+                <div className='w-1/2 h-full space-y-8'>
+                <div className='w-11/12 h-fit'>
+                <h1 className='text-4xl font-bold text-gray-800 font-root'>Stay ahead of the latest trends and boost your chances of going viral</h1>
+                </div>
+
+                    <p className='text-base text-gray-800 font-root'>Figure out exactly what engages your audience with trend tracking and discovery streams. 
+                        View hot topics by industry and then have AI instantly draft posts based on those trends.
+                         You can also search by topic, company, and hashtag to discover what’s getting the most action in your niche.
+                    </p>
+
+                    <div className='w-3/4 h-12 flex items-center'>
+                    <Button
+                    btnText="Learn more"
+                    className="w-36 h-12 text-xl border-gray-800 text-gray-800 border bg-transparent rounded-xl font-semibold hover:bg-gray-200"
+                    type="button"
+                    >x</Button>
+                    </div>
+                </div>
+            </div>
+
+            <div className='w-full h-40 mt-28 flex flex-col items-center justify-center space-y-5 fade-up'>
+                <div className='w-1/2 h-fit'>
+                <h2 className='text-4xl font-root text-gray-800 font-semibold text-center'>Why Tildette?</h2>
+                </div>
+                <p className='text-xl text-gray-800 font-root text-center'>Don’t worry, we won’t make you read our 2,000+ five-star reviews. 
+                    A few highlights: superior customer service, top-notch security features, and the best blog, webinars, and social media academy in the industry.</p>
             </div>
         </div>
     )

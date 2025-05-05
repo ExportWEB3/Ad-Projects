@@ -155,11 +155,11 @@ export function HeaderComponent () {
             <div className='w-1/4 h-full flex items-center justify-center'>
             <h1 className='text-base font-semibold text-gray-800 hover:text-blue-800 cursor-pointer'>Login</h1>
             <Button 
-            btnText="SignUp" 
-            className="ml-10 w-36 bg-fuchsia-950 rounded-xl font-semibold hover:bg-fuchsia-800" 
+            btnText="Start your free trial" 
+            className="ml-10 w-44 bg-gray-800 rounded-lg text-white font-semibold hover:bg-gray-700" 
             type="button" 
             onClick={() => {}}> 
-            Sign Up </Button>
+            x</Button>
             </div>
         </div>
     )
