@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* container */
+.customContainer {
+  max-width: 1600px;
+  padding: 0 80px;
+}
+.customContainerModified {
+  max-width: 1600px;
+  padding: 0 150px;
+
+}
+
+/* ends */
+
+/* buttons */
+
+.btn {
+  width: 150px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+/* ends */
+
+/* zIndex */
+
+.zIndex10 {
+  z-index: 20;
+}
+
+.link {
+  font-family: "Times New Roman", Times, serif !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+/* zIndex ends here */
+
+@media (max-width: 639px) {
+  .customContainerModified {
+    max-width: 1600px;
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 549px) {
+  .customContainerModified {
+    max-width: 1800px;
+    padding: 0 10px;
+  }
+}
+
+
+/* font starts here */
+
+.font-root {
+  font-family: 'Baloo 2', cursive;
+}

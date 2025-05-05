@@ -1,0 +1,19 @@
+
+
+.social {
+    width: 580px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.fontR {
+    letter-spacing: 2px;
+    animation-duration: 1000ms;
+    font-size: 55px;
+    line-height: 1;
+}
+.midInfo {
+    height: 480px;
+}
+.midInfo2 {
+    height: 600px;
+}
+
