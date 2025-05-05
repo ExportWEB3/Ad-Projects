@@ -1,9 +1,13 @@
 import React from 'react';
 import './landing.css'
 import { Button } from '../Button/button';
+import { UseFadeUpOnScroll } from '../Fade-up/fadeUp';
 
 
 export function LandingComponent() {
+    UseFadeUpOnScroll();
+
+
     return  (
         <div className="w-full h-full flex mt-20 customContainerModified items-center flex-col">
             <div className='w-full h-full flex items-center'>
@@ -33,14 +37,14 @@ export function LandingComponent() {
                 <img src="\src\Images\ikea.png" className='w-40 grayscale' />
             </div>
 
-            <div className='w-full h-40 mt-5 flex flex-col items-center justify-center space-y-5'>
+            <div className='w-full h-40 mt-5 flex flex-col items-center justify-center space-y-5 fade-up'>
                 <h2 className='text-4xl font-root text-gray-800 font-semibold'>Explore Hootsuite features: What’s in the dashboard?</h2>
                 <p className='text-xl text-gray-800 font-root'>Schedule, engage, monitor, and analyze social media posts. All in one user-friendly dashboard.</p>
             </div>
 
             <hr className="w-full opacity-100 text-black" />
 
-            <div className='w-full midInfo mt-5 flex items-center space-x-5 bg-gray-3'>
+            <div className='w-full midInfo mt-5 flex items-center space-x-5 bg-gray-3 fade-up'>
                 <div className='w-1/2 h-full flex justify-center flex-col space-y-2'>
                 <hr className='w-full '/>
                 <div className='w-full h-10 flex cursor-pointer text-gray-800 hover:text-red-400'>
@@ -61,13 +65,13 @@ export function LandingComponent() {
                 <hr className='w-full '/>
                 </div>
 
-                <div className='w-1/2 h-full flex flex-col items-center overflow-hidden'>
+                <div className='w-1/2 h-full flex flex-col items-center overflow-hidden fade-up'>
                 <img src="\src\Images\obarchart.jpg" className='rounded-xl'/>
                 </div>
 
             </div>
 
-            <div className='w-full midInfo2 flex flex-col items-center'>
+            <div className='w-full midInfo2 flex flex-col items-center fade-up'>
                 <h1 className='text-5xl font-bold mt-40 font-root text-gray-800'>What can Tildette do for you?</h1>
                 <div className='w-full h-80 flex mt-10'>
                     <div className='w-1/3 h-full flex flex-col items-center space-y-10'>
@@ -93,6 +97,32 @@ export function LandingComponent() {
                     <img src="\src\Images\Logo.png" className='w-40 grayscale'/>
                     </div>
                 </div>
+            </div>
+
+            <div className='w-full h-96 flex bg-gray-100 mt-20 fade-up p-8 space-x-5'>
+                <div className='w-1/2 h-full flex flex-col space-y-10'>
+                <div className='w-4/5 h-fit'>
+                <h1 className='text-4xl font-bold text-gray-800 font-root'>Discover the biggest social media trends shaping 2025</h1>
+                </div>
+
+                    <p className='text-base text-gray-800 font-root'>Do you know what the best social strategies have in common? 
+                        Or what qualities drive social media performance? And how you can apply them to your organization? 
+                        Dig into our Social Media Trends 2025 report for insights that'll help you drive action and make a real business impact.
+                    </p>
+
+                    <Button
+                    btnText="Read the Report"
+                    className="w-48 h-14 text-xl bg-fuchsia-950 rounded-xl font-semibold hover:bg-fuchsia-800"
+                    type="button"
+
+                    >x</Button>
+                </div>
+                <img src="\src\Images\brand.jpg" className='w-1/2' />
+            </div>
+
+            <div className='w-full h-40 mt-5 flex flex-col items-center justify-center space-y-5 fade-up'>
+                <h2 className='text-4xl font-root text-gray-800 font-semibold'>Save time, simplify, and grow faster on social media</h2>
+                <p className='text-xl text-gray-800 font-root'>Hootsuite is designed to help you manage social media faster, smarter, and with way less effort. </p>
             </div>
         </div>
     )
