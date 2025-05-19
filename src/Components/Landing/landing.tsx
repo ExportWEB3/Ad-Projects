@@ -2,6 +2,7 @@ import React from 'react';
 import './landing.css'
 import { Button } from '../Button/button';
 import { UseFadeUpOnScroll } from '../Fade-up/fadeUp';
+import { Icon } from '../Icon.component/Icon';
 
 
 export function LandingComponent() {
@@ -65,8 +66,8 @@ export function LandingComponent() {
                 <hr className='w-full '/>
                 </div>
 
-                <div className='w-1/2 h-full flex flex-col items-center overflow-hidden fade-up'>
-                <img src="\src\Images\obarchart.jpg" className='rounded-xl'/>
+                <div className='w-1/2 h-full flex flex-col items-center fade-up'>
+                <img src="\src\Images\obarchart.png" className='rounded-xl w-full'/>
                 </div>
 
             </div>
@@ -117,7 +118,7 @@ export function LandingComponent() {
 
                     >x</Button>
                 </div>
-                <img src="\src\Images\brand.jpg" className='w-1/2' />
+                <img src="\src\Images\brand.jpg" className='w-1/2 rounded-md' />
             </div>
 
             <div className='w-full h-40 mt-28 flex flex-col items-center justify-center space-y-5 fade-up'>
@@ -128,7 +129,7 @@ export function LandingComponent() {
             </div>
 
             <div className='w-full h-80 flex space-x-10 mt-14 fade-up'>
-                <div className='w-1/2 h-full bg-gray-400 overflow-hidden rounded-lg' >
+                <div className='w-1/2 h-full bg-gray-400 rounded-lg' >
                 <img src="\src\Images\schedule.png" className='w-full' />
                 </div>
 
@@ -178,7 +179,7 @@ export function LandingComponent() {
             </div>
 
             <div className='w-full h-80 mt-36 space-x-10 flex fade-up'>
-            <div className='w-1/2 h-full overflow-hidden' >
+            <div className='w-1/2 h-full' >
                 <img src="\src\Images\message-send.png" className='w-full rounded-lg' />
                 </div>
 
@@ -223,13 +224,13 @@ export function LandingComponent() {
                     </div>
                 </div>
 
-                <div className='w-1/2 h-full overflow-hidden' >
+                <div className='w-1/2 h-full' >
                 <img src="\src\Images\suspend-posts.png" className='w-full rounded-lg' />
                 </div>
             </div>
 
             <div className='w-full h-80 mt-36 space-x-10 flex fade-up'>
-            <div className='w-1/2 h-full overflow-hidden' >
+            <div className='w-1/2 h-full' >
                 <img src="\src\Images\metric.png" className='w-full rounded-lg' />
                 </div>
 
@@ -260,6 +261,91 @@ export function LandingComponent() {
                 <p className='text-xl text-gray-800 font-root text-center'>Don’t worry, we won’t make you read our 2,000+ five-star reviews. 
                     A few highlights: superior customer service, top-notch security features, and the best blog, webinars, and social media academy in the industry.</p>
             </div>
+
+            <div className='w-full hPx flex space-x-10 overflow-hidden fade-up'>
+                <div className='w-1/3 h-full flex flex-col items-center  space-y-5'>
+                <img src="\src\Images\logox.png" className='w-40 grayscale' />           
+                <h1 className='text-3xl font-bold text-gray-800 font-root'>17 years and 25 million users</h1>
+                <p className='text-xl text-gray-800 font-root text-center'>Hootsuite was the first, and we’re still the most popular 17 years later. Over 25 million users have used Hootsuite to post, track, and out-perform their competitors on social media.</p>
+                    <Button
+                    btnText="More About us"
+                    className="w-40 h-14 text-base border-gray-800 text-gray-800 border bg-transparent rounded-xl font-bold hover:bg-gray-200"
+                    type="button"
+                    >x</Button>
+                </div>
+
+                <div className='w-1/3 h-full flex flex-col items-center  space-y-5 mt-5'>
+                <img src="\src\Images\stars.png" className='w-44 grayscale' />           
+                <h1 className='text-4xl font-bold text-gray-800 font-root text-center'>The ultimate social media AI</h1>
+                <p className='text-xl text-gray-800 font-root text-center'>Hootsuite helps you automate every part of social media management — posting, writing, messaging, and social listening. 
+                    Our AI was designed by social pros for social pros.</p>
+                    <Button
+                    btnText="Learn more"
+                    className="w-40 h-14 text-base border-gray-800 text-gray-800 border bg-transparent rounded-xl font-bold hover:bg-gray-200"
+                    type="button"
+                    >x</Button>
+                </div>
+
+                <div className='w-1/3 h-full flex flex-col items-center  space-y-5 mt-5'>
+                <img src="\src\Images\plugin.png" className='w-40 grayscale' />           
+                <h1 className='text-4xl font-bold text-gray-800 font-root text-center'>The ultimate social media AI</h1>
+                <p className='text-xl text-gray-800 font-root text-center'>Connect over 100 integrations to bring all your favorite tools into the Hootsuite dashboard. 
+                    That’s more than any other social media management platform (by far).</p>
+                    <Button
+                    btnText="Explore Integrations"
+                    className="w-46 h-14 text-base border-gray-800 text-gray-800 border bg-transparent rounded-xl font-bold hover:bg-gray-200"
+                    type="button"
+                    >x</Button>
+                </div>
+            </div>
+
+            <div className='w-full hPx mt-20 flex flex-col items-center fade-up'>
+                <h1 className='text-5xl text-gray-800 font-root font-bold'>Reasons for social media Pros</h1>
+                <div className='w-full h-full flex space-x-10 mt-10'>
+                    <div className='w-1/3 h-full space-y-2'>
+                    <img src="\src\Images\bags.png"/>
+                    <h1 className='text-3xl font-bold text-gray-800 font-root'>How a retail brand used Hootsuite to increase sales by 750%</h1>
+                    <p className='text-base text-gray-800 font-semibold'>See how legendary candy-maker Stuckey’s leveraged Hootsuite Professional to skyrocket their online sales and following.</p>
+                    <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold'>Read more <span>
+                        <Icon
+                        icon="ri-arrow-right-line"
+                        className="text-gray-800 hover:text-blue-800 cursor-pointer"
+                         />
+                         </span> 
+                         </p>
+                    </div>
+
+                    <div className='w-1/3 h-full space-y-2'>
+                    <img src="\src\Images\cloud.png"/>
+                    <h1 className='text-3xl font-bold text-gray-800 font-root'>8 social media competitor analysis tools to help you get ahead</h1>
+                    <p className='text-base text-gray-800 font-semibold'>Find out how to beat the competition with the right social media competitor analysis tools. Get the scoop on the Hootsuite blog.</p>
+                    <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold'>Read more <span>
+                        <Icon
+                        icon="ri-arrow-right-line"
+                        className="text-gray-800 hover:text-blue-800 cursor-pointer"
+                         />
+                         </span> 
+                         </p>
+                    </div>
+
+
+                    <div className='w-1/3 h-full bg-white space-y-2'>
+                    <img src="\src\Images\award.png"/>
+                    <h1 className='text-3xl font-bold text-gray-800 font-root'>Take the Hootsuite Social Media Marketing Certification Course</h1>
+                    <p className='text-base text-gray-800 font-semibold'>Become a social media expert — and slap a shiny new certification on your resumé — with the industry standard in social media education.</p>
+                    <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold'>Sign Up Now <span>
+                        <Icon
+                        icon="ri-arrow-right-line"
+                        className="text-gray-800 hover:text-blue-800 cursor-pointer"
+                         />
+                         </span> 
+                         </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div className='w-full h-80'></div>
         </div>
     )
 }
