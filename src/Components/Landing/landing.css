@@ -1,8 +1,7 @@
 
 
 .social {
-    width: 580px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 600px;
 }
 .fontR {
     letter-spacing: 2px;
@@ -21,6 +20,12 @@
 }
 .hPHx{
     height: 550px;
+}
+.lastDiv{
+  height: 900px;
+}
+.lastLine{
+  height: 2px;
 }
 .shadow-x{
 box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;

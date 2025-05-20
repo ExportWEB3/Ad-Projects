@@ -4,14 +4,11 @@ import { Button } from '../Button/button';
 import { UseFadeUpOnScroll } from '../Fade-up/fadeUp';
 import { Icon } from '../Icon.component/Icon';
 import { reviews } from '../../utilities/data';
+import { Input } from '../Input/Input.component';
 
 
 export function LandingComponent() {
-    UseFadeUpOnScroll();
-
-      const [current, setCurrent] = useState(0);
-      // In your LandingComponent, add this state and update your prev/next handlers:
-
+const [current, setCurrent] = useState(0);
 const [direction, setDirection] = useState('');
 
 const prev = () => {
@@ -30,11 +27,14 @@ const next = () => {
   }, 500);
 };
 
+    UseFadeUpOnScroll();
+
+
 
     return  (
         <div className="w-full h-full flex mt-20 customContainerModified items-center flex-col">
             <div className='w-full h-full flex items-center'>
-            <img src="\src\Images\Social.jpg" className="social rounded-lg" alt="" />
+            <img src="\src\Images\Social.png" className="social" alt="" />
             <div className='w-1/2 h-80 ml-16'>
             <h1 className='font-bold fontR font-root wordSpacing text-gray-800'>Save time and get REAL</h1>
             <h1 className='font-bold fontR font-root wordSpacing text-gray-800 '>results on social media.</h1>
@@ -61,7 +61,7 @@ const next = () => {
             </div>
 
             <div className='w-full h-40 mt-5 flex flex-col items-center justify-center space-y-5 fade-up'>
-                <h2 className='text-4xl font-root text-gray-800 font-semibold'>Explore Hootsuite features: What’s in the dashboard?</h2>
+                <h2 className='text-4xl font-root text-gray-800 font-semibold'>Explore Tildette features: What’s in the dashboard?</h2>
                 <p className='text-xl text-gray-800 font-root'>Schedule, engage, monitor, and analyze social media posts. All in one user-friendly dashboard.</p>
             </div>
 
@@ -107,7 +107,7 @@ const next = () => {
 
                     <div className='w-1/3 h-full flex flex-col items-center space-y-10'>
                     <h1 className='text-7xl font-bold text-red-500'>500%</h1>
-                    <p className='text-xl text-center font-root text-gray-800'>growth across all social channels using Hootsuite Enterprise</p>
+                    <p className='text-xl text-center font-root text-gray-800'>growth across all social channels using Tildette Enterprise</p>
                     <img src="\src\Images\wood-buffalo.png" className='w-44 grayscale'/>
                     </div>
 
@@ -115,7 +115,7 @@ const next = () => {
 
                     <div className='w-1/3 h-full flex flex-col items-center space-y-10'>
                     <h1 className='text-7xl font-bold text-red-500'>2M+</h1>
-                    <p className='text-xl text-center font-root text-gray-800'>new followers on social media using Hootsuite Enterprise
+                    <p className='text-xl text-center font-root text-gray-800'>new followers on social media using Tildette Enterprise
                     </p>
                     <img src="\src\Images\Logo.png" className='w-40 grayscale'/>
                     </div>
@@ -288,7 +288,7 @@ const next = () => {
                 <div className='w-1/3 h-full flex flex-col items-center  space-y-5'>
                 <img src="\src\Images\logox.png" className='w-40 grayscale' />           
                 <h1 className='text-3xl font-bold text-gray-800 font-root'>17 years and 25 million users</h1>
-                <p className='text-xl text-gray-800 font-root text-center'>Hootsuite was the first, and we’re still the most popular 17 years later. Over 25 million users have used Hootsuite to post, track, and out-perform their competitors on social media.</p>
+                <p className='text-xl text-gray-800 font-root text-center'>Tildette was the first, and we’re still the most popular 17 years later. Over 25 million users have used Tildette to post, track, and out-perform their competitors on social media.</p>
                     <Button
                     btnText="More About us"
                     className="w-40 h-14 text-base border-gray-800 text-gray-800 border bg-transparent rounded-xl font-bold hover:bg-gray-200"
@@ -299,7 +299,7 @@ const next = () => {
                 <div className='w-1/3 h-full flex flex-col items-center  space-y-5 mt-5'>
                 <img src="\src\Images\stars.png" className='w-44 grayscale' />           
                 <h1 className='text-4xl font-bold text-gray-800 font-root text-center'>The ultimate social media AI</h1>
-                <p className='text-xl text-gray-800 font-root text-center'>Hootsuite helps you automate every part of social media management — posting, writing, messaging, and social listening. 
+                <p className='text-xl text-gray-800 font-root text-center'>Tildette helps you automate every part of social media management — posting, writing, messaging, and social listening. 
                     Our AI was designed by social pros for social pros.</p>
                     <Button
                     btnText="Learn more"
@@ -311,7 +311,7 @@ const next = () => {
                 <div className='w-1/3 h-full flex flex-col items-center  space-y-5 mt-5'>
                 <img src="\src\Images\plugin.png" className='w-40 grayscale' />           
                 <h1 className='text-4xl font-bold text-gray-800 font-root text-center'>The ultimate social media AI</h1>
-                <p className='text-xl text-gray-800 font-root text-center'>Connect over 100 integrations to bring all your favorite tools into the Hootsuite dashboard. 
+                <p className='text-xl text-gray-800 font-root text-center'>Connect over 100 integrations to bring all your favorite tools into the Tildette dashboard. 
                     That’s more than any other social media management platform (by far).</p>
                     <Button
                     btnText="Explore Integrations"
@@ -326,8 +326,8 @@ const next = () => {
                 <div className='w-full h-full flex space-x-10 mt-10'>
                     <div className='w-1/3 h-full space-y-2'>
                     <img src="\src\Images\bags.png"/>
-                    <h1 className='text-3xl font-bold text-gray-800 font-root'>How a retail brand used Hootsuite to increase sales by 750%</h1>
-                    <p className='text-base text-gray-800 font-semibold'>See how legendary candy-maker Stuckey’s leveraged Hootsuite Professional to skyrocket their online sales and following.</p>
+                    <h1 className='text-3xl font-bold text-gray-800 font-root'>How a retail brand used Tildette to increase sales by 750%</h1>
+                    <p className='text-base text-gray-800 font-semibold'>See how legendary candy-maker Stuckey’s leveraged Tildette Professional to skyrocket their online sales and following.</p>
                     <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold'>Read more <span>
                         <Icon
                         icon="ri-arrow-right-line"
@@ -340,7 +340,7 @@ const next = () => {
                     <div className='w-1/3 h-full space-y-2'>
                     <img src="\src\Images\cloud.png"/>
                     <h1 className='text-3xl font-bold text-gray-800 font-root'>8 social media competitor analysis tools to help you get ahead</h1>
-                    <p className='text-base text-gray-800 font-semibold'>Find out how to beat the competition with the right social media competitor analysis tools. Get the scoop on the Hootsuite blog.</p>
+                    <p className='text-base text-gray-800 font-semibold'>Find out how to beat the competition with the right social media competitor analysis tools. Get the scoop on the Tildette blog.</p>
                     <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold'>Read more <span>
                         <Icon
                         icon="ri-arrow-right-line"
@@ -353,7 +353,7 @@ const next = () => {
 
                     <div className='w-1/3 h-full bg-white space-y-2'>
                     <img src="\src\Images\award.png"/>
-                    <h1 className='text-3xl font-bold text-gray-800 font-root'>Take the Hootsuite Social Media Marketing Certification Course</h1>
+                    <h1 className='text-3xl font-bold text-gray-800 font-root'>Take the Tildette Social Media Marketing Certification Course</h1>
                     <p className='text-base text-gray-800 font-semibold'>Become a social media expert — and slap a shiny new certification on your resumé — with the industry standard in social media education.</p>
                     <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold'>Sign Up Now <span>
                         <Icon
@@ -369,7 +369,7 @@ const next = () => {
 
             <div className='w-full hPHx flex flex-col mt-40 justify-center fade-up'>
               <h1 className="text-4xl font-root font-bold text-center mb-10 text-gray-800">
-               Take it from real users: Hootsuite is a must-have
+               Take it from real users: Tildette is a must-have
               </h1>
               <div className='w-full hPx flex  px-16'>
             <div className="flex w-1/3 h-full">
@@ -377,7 +377,7 @@ const next = () => {
                  <div className="flex flex-col w-full">
                    <img src="\src\Images\g2_logo.webp" className="w-20 mb-4" />
                    <h2 className="text-3xl text-left font-bold mb-2">Our customers love us</h2>
-                   <p className="text-gray-800 mb-6 text-left">See what real users have to say about Hootsuite.</p>
+                   <p className="text-gray-800 mb-6 text-left">See what real users have to say about Tildette.</p>
                <div className="flex space-x-2">
                 <span onClick={prev} className='cursor-pointer'>
                   <Icon
@@ -444,15 +444,84 @@ const next = () => {
              </div>
             </div>
 
+            <div className='w-full h-96 mt-14 bg-gray-100 px-5 space-x-5 items-center flex fade-up'>
+              <img src="\src\Images\lastPic.png" className='' />
+              <div className='w-1/2 h-80 flex flex-col space-y-10'>
+              <h1 className='text-4xl font-semibold font-root text-gray-800'>Try Tildette for free. No strings attached.</h1>
+              <p className='text-xl font-medium font-root text-gray-800 '>With your free Tildette trial, you get instant access to social media scheduling, analytics, messaging, and social listening. Completely free.</p>
+              <div className='w-full h-14 flex items-center'> 
+              <Button
+              btnText="Start your Free 30-day Trial"
+              className="w-72 h-14 text-base bg-gray-800 rounded-lg text-white font-semibold hover:bg-gray-700"
+              type="button"
+              >x</Button>
+              <p className='text-xl font-semibold cursor-pointer hover:text-blue-800 text-gray-800 underline hover:no-underline ml-7'>Request a Demo</p>
+              </div>
+              </div>
+            </div>
 
 
+            <div className='w-screen lastDiv flex flex-col bg-gray-100 mt-20 items-center'>
+              <div className='w-2/3 h-80 mt-20 flex fade-up'>
+              <div className='w-w40 h-full'>
+                <h1 className='text-4xl font-root text-gray-800 font-bold'><a className='text-5xl font-root text-red-600'>The Perch</a> newsletter: Get smarter about social.</h1>
+                <p className='mt-8 font-root font-medium text-xl text-gray-800'>The Perch is your inside source for what’s happening in social media — and why it matters to you.</p>
+              </div>
+              <div className='w-1/2 h-full ml-32'>
+              <Input
+              type='text'
+              placeHolder='Enter your email address'
+              displayText='Email address: *'
+              displayTextClassName='text-gray-800 font-semibold'
+              className='w-full h-12 border-gray-300 shadow outline-none px-3 py-2'
+               />
 
+               <Button 
+              btnText="Subscribe"
+              className="w-36 h-12 mt-10 text-base bg-gray-800 rounded-lg text-white font-semibold hover:bg-gray-700"
+              type="button"
+               >x</Button>
+              </div>
+              </div>
 
-
-
+                          <hr className='w-2/3 lastLine bg-black'/>
 
             
-            <div className='w-full h-80'></div>
+            <div className='w-2/3 h-1/2 bg-gray-20 mt-10 flex fade-up'>
+            <div className='w-48 h-96 flex flex-col space-y-5'>
+              <h1 className='text-xl font-bold text-gray-800 font-root'>About</h1>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Why Tildette</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>About Us</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Careers</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Leadership</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Customers</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>News Room</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Social Impact and DEI</p>
+            </div>
+
+            <div className='w-48 h-96 flex flex-col ml-20 space-y-5'>
+              <h1 className='text-xl font-bold text-gray-800 font-root'>Price</h1>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Pricing</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Standard</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Advanced</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Enterprise</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Features</p>
+            </div>
+
+            <div className='w-48 h-96 flex flex-col ml-20 space-y-5'>
+              <h1 className='text-xl font-bold text-gray-800 font-root'>Support</h1>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Need help?</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Product Updates</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Contact Us</p>
+            </div>
+
+            <div className='w-48 h-48 flex flex-col space-y-5'>
+              <img src="\src\Images\d on appstore.png" className='cursor-pointer'/>
+              <img src="\src\Images\get it on google play.webp" className='cursor-pointer'/>
+            </div>
+            </div>
+            </div>
+            
         </div>
     )
 }
