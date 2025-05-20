@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './landing.css'
 import { Button } from '../Button/button';
 import { UseFadeUpOnScroll } from '../Fade-up/fadeUp';
 import { Icon } from '../Icon.component/Icon';
+import { reviews } from '../../utilities/data';
 
 
 export function LandingComponent() {
     UseFadeUpOnScroll();
+
+      const [current, setCurrent] = useState(0);
+      // In your LandingComponent, add this state and update your prev/next handlers:
+
+const [direction, setDirection] = useState('');
+
+const prev = () => {
+  setDirection('left');
+  setTimeout(() => {
+    setCurrent((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
+    setDirection('');
+  }, 500);
+};
+
+const next = () => {
+  setDirection('right');
+  setTimeout(() => {
+    setCurrent((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
+    setDirection('');
+  }, 500);
+};
 
 
     return  (
@@ -345,6 +367,91 @@ export function LandingComponent() {
                 </div>
             </div>
 
+            <div className='w-full hPHx flex flex-col mt-40 justify-center fade-up'>
+              <h1 className="text-4xl font-root font-bold text-center mb-10 text-gray-800">
+               Take it from real users: Hootsuite is a must-have
+              </h1>
+              <div className='w-full hPx flex  px-16'>
+            <div className="flex w-1/3 h-full">
+                     {/* Left section */}
+                 <div className="flex flex-col w-full">
+                   <img src="\src\Images\g2_logo.webp" className="w-20 mb-4" />
+                   <h2 className="text-3xl text-left font-bold mb-2">Our customers love us</h2>
+                   <p className="text-gray-800 mb-6 text-left">See what real users have to say about Hootsuite.</p>
+               <div className="flex space-x-2">
+                <span onClick={prev} className='cursor-pointer'>
+                  <Icon
+                    icon="ri-arrow-left-circle-line"
+                    className='text-5xl text-gray-800 hover:text-gray-400'
+                  />
+                </span>
+
+                <span onClick={next} className='cursor-pointer'>
+                  <Icon
+                    icon="ri-arrow-right-circle-line"
+                    className='text-5xl text-gray-800 hover:text-gray-400'
+                  />
+                </span>
+              </div>
+             </div>
+             </div>
+                {/* Right section */}
+                <div className='w-4/5 h-h90'>
+              <div
+               className={`bg-white ml-2 rounded-xl shadow-x p-10 w-full h-h90 flex flex-col relative review-card-animate
+               ${direction === 'left' ? 'review-card-slide-left' : ''}
+             ${direction === 'right' ? 'review-card-slide-right' : ''}
+             ${direction === '' ? 'review-card-active' : ''}
+              `}
+              key={current} // ensures re-render for animation
+              onAnimationEnd={() => setDirection('')}
+             >
+                            <div className="flex items-center mb-6">
+              <img
+                src={reviews[current].img}
+                className="w-28 h-28 rounded-full object-cover mr-8"
+              />
+              <div>
+                <div className="flex items-center">
+                  {Array.from({ length: reviews[current].stars }).map((_, i) => (
+                    <span key={i} className="text-red-500 text-2xl">&#9733;</span>
+                  ))}
+                </div>
+                <div className="text-gray-500 text-sm">{reviews[current].date}</div>
+              </div>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold ">{reviews[current].text}</h2>
+              <p className="text-gray-700 mb-4">{reviews[current].desc}</p>
+              <div className="font-bold">{reviews[current].user}</div>
+              <div className="text-gray-500 text-sm mb-4">{reviews[current].role}</div>
+              <a href="#" className="text-blue-900 font-semibold flex items-center hover:underline absolute right-5">
+                Read the full review
+                <span className="ml-2">&#8594;</span>
+              </a>
+             </div>
+             </div>
+
+             <div className='w-full h-10 flex items-center justify-center space-x-5'>
+               {reviews.map((_, idx) => (
+              <span
+              key={idx}
+              className={`w-3 h-3 rounded-full border-2 ${current === idx ? 'border-blue-900 bg-blue-100' : 'border-gray-300'} inline-block`}
+             />
+              ))}
+             </div>
+             </div>
+             </div>
+            </div>
+
+
+
+
+
+
+
+
+            
             <div className='w-full h-80'></div>
         </div>
     )
