@@ -109,10 +109,11 @@ export interface inputAttributes {
   displayText?: string;
   className?: string;
   displayType?: "flex-row" | "flex-col";
-  onChange: Function;
+  onChange?: Function;
   payload?: unknown;
   divClassName?: string;
   value?: unknown;
+  displayTextClassName?: string; // NEW: allow custom class for display text
 }
 
 export type registeruserAttributes =

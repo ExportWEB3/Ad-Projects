@@ -4,8 +4,8 @@ export const reviews = [
   {
     date: "Apr 24, 2025",
     stars: 5,
-    text: "“Hootsuite makes my life 10x easier!”",
-    desc: "I work with a series of gyms and franchises and I love that Hootsuite allows me to post on all of my individual platforms but also allows me to cross promote when I need to! The option to customize my captions for each platform is a game changer.",
+    text: "Tildette makes my life 10x easier!”",
+    desc: "I work with a series of gyms and franchises and I love that Tildette allows me to post on all of my individual platforms but also allows me to cross promote when I need to! The option to customize my captions for each platform is a game changer.",
     user: "Courtney W.",
     role: "Social Media Manager",
     img: "/src/Images/courtney.webp"
@@ -14,7 +14,7 @@ export const reviews = [
     date: "Mar 15, 2025",
     stars: 4,
     text: "“A must-have for social teams!”",
-    desc: "Hootsuite helps our team stay organized and on top of our content calendar. Scheduling and analytics are super easy to use and save us hours every week.",
+    desc: "Tildette helps our team stay organized and on top of our content calendar. Scheduling and analytics are super easy to use and save us hours every week.",
     user: "Alex P.",
     role: "Content Strategist",
     img: "/src/Images/alex.webp"
@@ -23,7 +23,7 @@ export const reviews = [
     date: "Feb 2, 2025",
     stars: 5,
     text: "“Best tool for managing multiple brands”",
-    desc: "Managing several brands is a breeze with Hootsuite. The dashboard is intuitive and the reporting features are top notch.",
+    desc: "Managing several brands is a breeze with Tildette. The dashboard is intuitive and the reporting features are top notch.",
     user: "Jamie L.",
     role: "Brand Manager",
     img: "/src/Images/jamie.jpg"
@@ -32,7 +32,7 @@ export const reviews = [
     date: "Jan 10, 2025",
     stars: 5,
     text: "“Excellent customer support”",
-    desc: "Whenever we have a question, the Hootsuite support team is quick to help. The platform is reliable and always improving.",
+    desc: "Whenever we have a question, the Tildette support team is quick to help. The platform is reliable and always improving.",
     user: "Morgan S.",
     role: "Digital Marketer",
     img: "/src/Images/morgan.webp"
