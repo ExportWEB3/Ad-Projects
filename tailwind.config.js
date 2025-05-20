@@ -6,6 +6,15 @@ export default {
       zIndex: {
         zIndex5: "5",
       },
+      width: {
+        w95: "95%",
+        w90: "90%",
+      },
+      height: {
+        h95: "95%",
+        h90: "90%",
+        h85: "85%",
+      },
       screens: {
         xsm: "320px",
       },

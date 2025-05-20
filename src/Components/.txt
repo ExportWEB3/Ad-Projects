@@ -1,0 +1,92 @@
+import React, { useState } from 'react';
+
+const reviews = [
+  {
+    date: "Apr 24, 2025",
+    stars: 5,
+    text: "“Hootsuite makes my life 10x easier!”",
+    desc: "I work with a series of gyms and franchises and I love that Hootsuite allows me to post on all of my individual platforms but also allows me to cross promote when I need to! The option to customize my captions for each p...",
+    user: "Courtney W.",
+    role: "Social Media Manager",
+    img: "/src/Images/user1.png"
+  },
+  // Add more review objects as needed
+];
+
+export function ReviewCarousel() {
+  const [current, setCurrent] = useState(0);
+
+  const prev = () => setCurrent((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
+  const next = () => setCurrent((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
+
+  return (
+    <div className="w-full flex flex-col items-center mt-20">
+      <h1 className="text-4xl font-root font-bold text-center mb-10">
+        Take it from real users: Hootsuite is a must-have
+      </h1>
+      <div className="flex w-full max-w-6xl mx-auto">
+        {/* Left section */}
+        <div className="flex flex-col items-center justify-center w-1/4">
+          <img src="/src/Images/g2.png" alt="G2" className="w-16 mb-4" />
+          <h2 className="text-2xl font-bold mb-2">Our customers love us</h2>
+          <p className="text-gray-700 mb-6 text-center">See what real users have to say about Hootsuite.</p>
+          <div className="flex space-x-2">
+            <button
+              onClick={prev}
+              className="w-10 h-10 rounded-full border flex items-center justify-center text-2xl text-gray-400 hover:text-blue-800 hover:border-blue-800 transition"
+              aria-label="Previous"
+            >
+              &#8592;
+            </button>
+            <button
+              onClick={next}
+              className="w-10 h-10 rounded-full border flex items-center justify-center text-2xl text-blue-900 hover:bg-blue-100 hover:border-blue-800 transition"
+              aria-label="Next"
+            >
+              &#8594;
+            </button>
+          </div>
+        </div>
+        {/* Review Card */}
+        <div className="w-3/4 flex justify-center">
+          <div className="bg-white rounded-xl shadow p-10 w-full max-w-3xl flex flex-col relative">
+            <div className="flex items-center mb-6">
+              <img
+                src={reviews[current].img}
+                alt={reviews[current].user}
+                className="w-28 h-28 rounded-full object-cover mr-8"
+              />
+              <div>
+                <div className="flex items-center mb-2">
+                  {Array.from({ length: reviews[current].stars }).map((_, i) => (
+                    <span key={i} className="text-red-500 text-2xl">&#9733;</span>
+                  ))}
+                </div>
+                <div className="text-gray-500 text-sm">{reviews[current].date}</div>
+              </div>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold mb-2">{reviews[current].text}</h2>
+              <p className="text-gray-700 mb-4">{reviews[current].desc}</p>
+              <div className="font-bold">{reviews[current].user}</div>
+              <div className="text-gray-500 text-sm mb-4">{reviews[current].role}</div>
+              <a href="#" className="text-blue-900 font-semibold flex items-center hover:underline">
+                Read the full review
+                <span className="ml-2">&#8594;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Dots */}
+      <div className="flex space-x-2 mt-6">
+        {reviews.map((_, idx) => (
+          <span
+            key={idx}
+            className={`w-4 h-4 rounded-full border-2 ${current === idx ? 'border-blue-900 bg-blue-100' : 'border-gray-300'} inline-block`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}

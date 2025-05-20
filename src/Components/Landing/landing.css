@@ -19,3 +19,25 @@
 .hPx {
     height: 500px;
 }
+.hPHx{
+    height: 550px;
+}
+.shadow-x{
+box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.review-card-animate {
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.5s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform, opacity;
+}
+.review-card-slide-left {
+  transform: translateX(-80px);
+  opacity: 0;
+}
+.review-card-slide-right {
+  transform: translateX(80px);
+  opacity: 0;
+}
+.review-card-active {
+  transform: translateX(0);
+  opacity: 1;
+}
