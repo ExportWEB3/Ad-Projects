@@ -1,5 +1,51 @@
-
 /* container */
   .img{
     width: 10px;
   }
+
+/* Responsive header styles */
+@media (max-width: 768px) {
+  .customContainer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .customContainer .md\:flex {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .customContainer .md\:flex {
+    display: flex !important;
+  }
+  .customContainer .md\:hidden {
+    display: none !important;
+  }
+}
+
+/* Mobile menu overlay */
+@media (max-width: 768px) {
+  .customContainer .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 100;
+    display: flex;
+  }
+  .customContainer .mobile-menu-content {
+    background: #fff;
+    width: 80vw;
+    max-width: 320px;
+    height: 100vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
