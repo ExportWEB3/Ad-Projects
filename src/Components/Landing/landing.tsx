@@ -5,6 +5,7 @@ import { UseFadeUpOnScroll } from '../Fade-up/fadeUp';
 import { Icon } from '../Icon.component/Icon';
 import { reviews } from '../../utilities/data';
 import { Input } from '../Input/Input.component';
+import { Footer } from '../footer/footer';
 
 
 export function LandingComponent() {
@@ -484,7 +485,7 @@ const next = () => {
               </div>
               </div>
 
-                          <hr className='w-2/3 lastLine bg-black'/>
+                          <hr className='w-2/3 lastLine bg-black opacity-40'/>
 
             
             <div className='w-2/3 h-1/2 bg-gray-20 mt-10 flex fade-up'>
@@ -520,6 +521,10 @@ const next = () => {
               <img src="\src\Images\get it on google play.webp" className='cursor-pointer'/>
             </div>
             </div>
+                        <hr className='w-full lastLine bg-black -mt-20 opacity-50' />
+
+              <Footer />
+
             </div>
             
         </div>
