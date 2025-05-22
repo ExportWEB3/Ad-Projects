@@ -10,6 +10,6 @@ export default defineConfig({
     watch: {
       usePolling: true,
     },
-    allowedHosts: [''], // <-- Add this line
+    allowedHosts: ['1255-197-210-227-192.ngrok-free.app'], // <-- Add this line
   },
 });

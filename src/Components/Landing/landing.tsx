@@ -37,9 +37,9 @@ const next = () => {
             <div className='w-full h-full flex items-center'>
             <img src="\src\Images\Social.png" className="social" alt="" />
             <div className='w-1/2 h-80 ml-16'>
-            <h1 className='font-bold fontR font-root wordSpacing text-gray-800'>Save time and get REAL</h1>
-            <h1 className='font-bold fontR font-root wordSpacing text-gray-800 '>results on social media.</h1>
-            <h1 className='font-bold fontR font-root wordSpacing text-red-700 '>Tildette makes it easy.</h1>
+            <h1 className='font-bold fontR font-root wordSpacing text-gray-800 hero-title'>Save time and get REAL</h1>
+            <h1 className='font-bold fontR font-root wordSpacing text-gray-800 hero-title'>results on social media.</h1>
+            <h1 className='font-bold fontR font-root wordSpacing text-red-700 hero-title'>Tildette makes it easy.</h1>
 
             <div className='w-3/4 h-20 mt-10 flex items-center space-x-10'>
             <Button
@@ -53,7 +53,7 @@ const next = () => {
             </div>
             </div>
 
-            <div className='w-full h-40 mt-5 flex items-center space-x-28'>
+            <div className='w-full h-40 mt-5 flex items-center space-x-28 brand-logos-row'>
                 <img src="\src\Images\JetBlue.png" className='w-40 opacity-50 grayscale' />
                 <img src="\src\Images\UniOfChi.png" className='w-40 opacity-50 grayscale' />
                 <img src="\src\Images\UHaul.png" className='w-40 opacity-50 grayscale' />
@@ -96,25 +96,25 @@ const next = () => {
             </div>
 
             <div className='w-full midInfo2 flex flex-col items-center fade-up'>
-                <h1 className='text-5xl font-bold mt-40 font-root text-gray-800'>What can Tildette do for you?</h1>
-                <div className='w-full h-80 flex mt-10'>
-                    <div className='w-1/3 h-full flex flex-col items-center space-y-10'>
+                <h1 className='text-5xl font-bold mt-40 font-root text-gray-800 midInfo2-title'>What can Tildette do for you?</h1>
+                <div className='w-full h-80 flex mt-10 midInfo2-row fade-up'>
+                    <div className='w-1/3 h-full flex flex-col items-center space-y-10 midInfo2-col'>
                     <h1 className='text-7xl font-bold text-red-500'>80%</h1>
                     <p className='text-xl text-center font-root text-gray-800'>reduction in workload using Tildette's chatbot capabilities</p>
                     <img src="\src\Images\Logo.png" className='w-40 grayscale '/>
                     </div>
 
-                    <hr className='h-full w-px bg-gray-400 mx-4'/>
+                    <hr className='h-full w-px bg-gray-400 mx-4 midInfo2-hr'/>
 
-                    <div className='w-1/3 h-full flex flex-col items-center space-y-10'>
+                    <div className='w-1/3 h-full flex flex-col items-center space-y-10 fade-up midInfo2-col'>
                     <h1 className='text-7xl font-bold text-red-500'>500%</h1>
                     <p className='text-xl text-center font-root text-gray-800'>growth across all social channels using Tildette Enterprise</p>
                     <img src="\src\Images\wood-buffalo.png" className='w-44 grayscale'/>
                     </div>
 
-                    <hr className='h-full w-px bg-gray-400 mx-4'/>
+                    <hr className='h-full w-px bg-gray-400 mx-4 midInfo2-hr'/>
 
-                    <div className='w-1/3 h-full flex flex-col items-center space-y-10'>
+                    <div className='w-1/3 h-full flex flex-col items-center space-y-10 fade-up midInfo2-col'>
                     <h1 className='text-7xl font-bold text-red-500'>2M+</h1>
                     <p className='text-xl text-center font-root text-gray-800'>new followers on social media using Tildette Enterprise
                     </p>
@@ -123,7 +123,7 @@ const next = () => {
                 </div>
             </div>
 
-            <div className='w-full h-96 flex bg-gray-100 mt-20 fade-up p-8 space-x-5'>
+            <div className='w-full h-96 flex bg-gray-100 mt-20 mt-20-trends fade-up p-8 space-x-5'>
                 <div className='w-1/2 h-full flex flex-col space-y-10'>
                 <div className='w-4/5 h-fit'>
                 <h1 className='text-4xl font-bold text-gray-800 font-root'>Discover the biggest social media trends shaping 2025</h1>
@@ -144,14 +144,14 @@ const next = () => {
                 <img src="\src\Images\brand.jpg" className='w-1/2 rounded-md' />
             </div>
 
-            <div className='w-full h-40 mt-28 flex flex-col items-center justify-center space-y-5 fade-up'>
+            <div className='w-full h-40 mt-28 flex flex-col items-center justify-center space-y-5 fade-up feature-section'>
                 <div className='w-1/2 h-fit'>
                 <h2 className='text-4xl font-root text-gray-800 font-semibold text-center'>Save time, simplify, and grow faster on social media</h2>
                 </div>
                 <p className='text-xl text-gray-800 font-root'>Tildette is designed to help you manage social media faster, smarter, and with way less effort. </p>
             </div>
 
-            <div className='w-full h-80 flex space-x-10 mt-14 fade-up'>
+            <div className='w-full h-80 flex space-x-10 mt-14 fade-up feature-section'>
                 <div className='w-1/2 h-full bg-gray-400 rounded-lg' >
                 <img src="\src\Images\schedule.png" className='w-full' />
                 </div>
@@ -174,7 +174,7 @@ const next = () => {
                 </div>
             </div>
 
-            <div className='w-full h-80 mt-36 space-x-10 flex fade-up'>
+            <div className='w-full h-80 mt-36 space-x-10 flex fade-up feature-section'>
                 <div className='w-1/2 h-full space-y-8'>
                 <div className='w-11/12 h-fit'>
                 <h1 className='text-4xl font-bold text-gray-800 font-root'>Boost engagement, reach, and follower count with less effort</h1>
@@ -192,7 +192,6 @@ const next = () => {
                     type="button"
                     >x</Button>
 
-                    <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer ml-5 text-base'>Learn more</p>
                     </div>
                 </div>
 
@@ -201,8 +200,8 @@ const next = () => {
                 </div>
             </div>
 
-            <div className='w-full h-80 mt-36 space-x-10 flex fade-up'>
-            <div className='w-1/2 h-full' >
+            <div className='w-full h-80 mt-36 space-x-10 flex fade-up feature-section'>
+                <div className='w-1/2 h-full' >
                 <img src="\src\Images\message-send.png" className='w-full rounded-lg' />
                 </div>
 
@@ -226,7 +225,7 @@ const next = () => {
                 </div>
             </div>
 
-            <div className='w-full h-80 mt-36 space-x-10 flex fade-up'>
+            <div className='w-full h-80 mt-36 space-x-10 flex fade-up feature-section'>
                 <div className='w-1/2 h-full space-y-8'>
                 <div className='w-11/12 h-fit'>
                 <h1 className='text-4xl font-bold text-gray-800 font-root'>Safeguard your reputation and never miss a chance to engage</h1>
@@ -243,7 +242,6 @@ const next = () => {
                     className="w-36 h-12 text-xl border-gray-800 text-gray-800 border bg-transparent rounded-xl font-semibold hover:bg-gray-200"
                     type="button"
                     >x</Button>
-
                     </div>
                 </div>
 
@@ -252,8 +250,8 @@ const next = () => {
                 </div>
             </div>
 
-            <div className='w-full h-80 mt-36 space-x-10 flex fade-up'>
-            <div className='w-1/2 h-full' >
+            <div className='w-full h-80 mt-36 space-x-10 flex fade-up feature-section'>
+                <div className='w-1/2 h-full' >
                 <img src="\src\Images\metric.png" className='w-full rounded-lg' />
                 </div>
 
@@ -277,7 +275,7 @@ const next = () => {
                 </div>
             </div>
 
-            <div className='w-full h-40 mt-28 flex flex-col items-center justify-center space-y-5 fade-up'>
+            <div className='w-full h-40 mt-28 flex flex-col items-center justify-center space-y-5 fade-up feature-section'>
                 <div className='w-1/2 h-fit'>
                 <h2 className='text-4xl font-root text-gray-800 font-semibold text-center'>Why Tildette?</h2>
                 </div>
@@ -297,7 +295,7 @@ const next = () => {
                     >x</Button>
                 </div>
 
-                <div className='w-1/3 h-full flex flex-col items-center  space-y-5 mt-5'>
+                <div className='w-1/3 h-full flex flex-col items-center  space-y-5 mt-5 fade-up'>
                 <img src="\src\Images\stars.png" className='w-44 grayscale' />           
                 <h1 className='text-4xl font-bold text-gray-800 font-root text-center'>The ultimate social media AI</h1>
                 <p className='text-xl text-gray-800 font-root text-center'>Tildette helps you automate every part of social media management — posting, writing, messaging, and social listening. 
@@ -309,7 +307,7 @@ const next = () => {
                     >x</Button>
                 </div>
 
-                <div className='w-1/3 h-full flex flex-col items-center  space-y-5 mt-5'>
+                <div className='w-1/3 h-full flex flex-col items-center  space-y-5 mt-5 fade-up'>
                 <img src="\src\Images\plugin.png" className='w-40 grayscale' />           
                 <h1 className='text-4xl font-bold text-gray-800 font-root text-center'>The ultimate social media AI</h1>
                 <p className='text-xl text-gray-800 font-root text-center'>Connect over 100 integrations to bring all your favorite tools into the Tildette dashboard. 
@@ -322,127 +320,46 @@ const next = () => {
                 </div>
             </div>
 
-            <div className='w-full hPx mt-20 flex flex-col items-center fade-up'>
-                <h1 className='text-5xl text-gray-800 font-root font-bold'>Reasons for social media Pros</h1>
-                <div className='w-full h-full flex space-x-10 mt-10'>
-                    <div className='w-1/3 h-full space-y-2'>
+            <div className='w-full hPx mt-20 flex flex-col items-center fade-up feature-section'>
+                <h1 className='text-5xl text-gray-800 font-root font-bold reasons-header'>Reasons for social media Pros</h1>
+                <div className='w-full h-full flex space-x-10 mt-10 feature-section-cards fade-up'>
+                  <div className='w-1/3 h-full space-y-2 feature-card fade-up'>
                     <img src="\src\Images\bags.png"/>
                     <h1 className='text-3xl font-bold text-gray-800 font-root'>How a retail brand used Tildette to increase sales by 750%</h1>
                     <p className='text-base text-gray-800 font-semibold'>See how legendary candy-maker Stuckey’s leveraged Tildette Professional to skyrocket their online sales and following.</p>
                     <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold'>Read more <span>
-                        <Icon
+                      <Icon
                         icon="ri-arrow-right-line"
                         className="text-gray-800 hover:text-blue-800 cursor-pointer"
-                         />
-                         </span> 
-                         </p>
-                    </div>
-
-                    <div className='w-1/3 h-full space-y-2'>
+                      />
+                    </span> 
+                    </p>
+                  </div>
+                  <div className='w-1/3 h-full space-y-2 feature-card fade-up'>
                     <img src="\src\Images\cloud.png"/>
                     <h1 className='text-3xl font-bold text-gray-800 font-root'>8 social media competitor analysis tools to help you get ahead</h1>
                     <p className='text-base text-gray-800 font-semibold'>Find out how to beat the competition with the right social media competitor analysis tools. Get the scoop on the Tildette blog.</p>
                     <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold'>Read more <span>
-                        <Icon
+                      <Icon
                         icon="ri-arrow-right-line"
                         className="text-gray-800 hover:text-blue-800 cursor-pointer"
-                         />
-                         </span> 
-                         </p>
-                    </div>
-
-
-                    <div className='w-1/3 h-full bg-white space-y-2'>
+                      />
+                    </span> 
+                    </p>
+                  </div>
+                  <div className='w-1/3 h-full bg-white space-y-2 feature-card fade-up'>
                     <img src="\src\Images\award.png"/>
                     <h1 className='text-3xl font-bold text-gray-800 font-root'>Take the Tildette Social Media Marketing Certification Course</h1>
                     <p className='text-base text-gray-800 font-semibold'>Become a social media expert — and slap a shiny new certification on your resumé — with the industry standard in social media education.</p>
                     <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold'>Sign Up Now <span>
-                        <Icon
+                      <Icon
                         icon="ri-arrow-right-line"
                         className="text-gray-800 hover:text-blue-800 cursor-pointer"
-                         />
-                         </span> 
-                         </p>
-                    </div>
-
+                      />
+                    </span> 
+                    </p>
+                  </div>
                 </div>
-            </div>
-
-            <div className='w-full hPHx flex flex-col mt-40 justify-center fade-up'>
-              <h1 className="text-4xl font-root font-bold text-center mb-10 text-gray-800">
-               Take it from real users: Tildette is a must-have
-              </h1>
-              <div className='w-full hPx flex  px-16'>
-            <div className="flex w-1/3 h-full">
-                     {/* Left section */}
-                 <div className="flex flex-col w-full">
-                   <img src="\src\Images\g2_logo.webp" className="w-20 mb-4" />
-                   <h2 className="text-3xl text-left font-bold mb-2">Our customers love us</h2>
-                   <p className="text-gray-800 mb-6 text-left">See what real users have to say about Tildette.</p>
-               <div className="flex space-x-2">
-                <span onClick={prev} className='cursor-pointer'>
-                  <Icon
-                    icon="ri-arrow-left-circle-line"
-                    className='text-5xl text-gray-800 hover:text-gray-400'
-                  />
-                </span>
-
-                <span onClick={next} className='cursor-pointer'>
-                  <Icon
-                    icon="ri-arrow-right-circle-line"
-                    className='text-5xl text-gray-800 hover:text-gray-400'
-                  />
-                </span>
-              </div>
-             </div>
-             </div>
-                {/* Right section */}
-                <div className='w-4/5 h-h90'>
-              <div
-               className={`bg-white ml-2 rounded-xl shadow-x p-10 w-full h-h90 flex flex-col relative review-card-animate
-               ${direction === 'left' ? 'review-card-slide-left' : ''}
-             ${direction === 'right' ? 'review-card-slide-right' : ''}
-             ${direction === '' ? 'review-card-active' : ''}
-              `}
-              key={current} // ensures re-render for animation
-              onAnimationEnd={() => setDirection('')}
-             >
-                            <div className="flex items-center mb-6">
-              <img
-                src={reviews[current].img}
-                className="w-28 h-28 rounded-full object-cover mr-8"
-              />
-              <div>
-                <div className="flex items-center">
-                  {Array.from({ length: reviews[current].stars }).map((_, i) => (
-                    <span key={i} className="text-red-500 text-2xl">&#9733;</span>
-                  ))}
-                </div>
-                <div className="text-gray-500 text-sm">{reviews[current].date}</div>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-2xl font-bold ">{reviews[current].text}</h2>
-              <p className="text-gray-700 mb-4">{reviews[current].desc}</p>
-              <div className="font-bold">{reviews[current].user}</div>
-              <div className="text-gray-500 text-sm mb-4">{reviews[current].role}</div>
-              <a href="#" className="text-blue-900 font-semibold flex items-center hover:underline absolute right-5">
-                Read the full review
-                <span className="ml-2">&#8594;</span>
-              </a>
-             </div>
-             </div>
-
-             <div className='w-full h-10 flex items-center justify-center space-x-5'>
-               {reviews.map((_, idx) => (
-              <span
-              key={idx}
-              className={`w-3 h-3 rounded-full border-2 ${current === idx ? 'border-blue-900 bg-blue-100' : 'border-gray-300'} inline-block`}
-             />
-              ))}
-             </div>
-             </div>
-             </div>
             </div>
 
             <div className='w-full h-96 mt-14 bg-gray-100 px-5 space-x-5 items-center flex fade-up'>
@@ -462,13 +379,13 @@ const next = () => {
             </div>
 
 
-            <div className='w-screen lastDiv flex flex-col bg-gray-100 mt-20 items-center'>
-              <div className='w-2/3 h-80 mt-20 flex fade-up'>
+            <div className='w-screen lastDiv flex flex-col bg-gray-100 mt-20 items-center newsletter-section fade-up'>
+              <div className='w-2/3 h-80 mt-20 flex fade-up newsletter-content'>
               <div className='w-w40 h-full'>
-                <h1 className='text-4xl font-root text-gray-800 font-bold'><a className='text-5xl font-root text-red-600'>The Perch</a> newsletter: Get smarter about social.</h1>
-                <p className='mt-8 font-root font-medium text-xl text-gray-800'>The Perch is your inside source for what’s happening in social media — and why it matters to you.</p>
+                <h1 className='text-4xl font-root text-gray-800 font-bold newsletter-title'><a className='text-5xl font-root text-red-600'>The Perch</a> newsletter: Get smarter about social.</h1>
+                <p className='mt-8 font-root font-medium text-xl text-gray-800 newsletter-desc'>The Perch is your inside source for what’s happening in social media — and why it matters to you.</p>
               </div>
-              <div className='w-1/2 h-full ml-32'>
+              <div className='w-1/2 h-full ml-32 newsletter-form'>
               <Input
               type='text'
               placeHolder='Enter your email address'
@@ -484,11 +401,10 @@ const next = () => {
                >x</Button>
               </div>
               </div>
-
-                          <hr className='w-2/3 lastLine bg-black opacity-40'/>
+              <hr className='w-2/3 lastLine bg-black opacity-40'/>
 
             
-            <div className='w-2/3 h-1/2 bg-gray-20 mt-10 flex fade-up'>
+            <div className='w-2/3 h-1/2 bg-gray-20 mt-10 flex fade-up footer-links-section'>
             <div className='w-48 h-96 flex flex-col space-y-5'>
               <h1 className='text-xl font-bold text-gray-800 font-root'>About</h1>
               <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Why Tildette</p>
@@ -496,11 +412,11 @@ const next = () => {
               <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Careers</p>
               <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Leadership</p>
               <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Customers</p>
-              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>News Room</p>
-              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Social Impact and DEI</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold' data-footer-link-news>News Room</p>
+              <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold' data-footer-link-dei>Social Impact and DEI</p>
             </div>
 
-            <div className='w-48 h-96 flex flex-col ml-20 space-y-5'>
+            <div className='w-48 h-96 flex flex-col ml-20 space-y-5 fade-up'>
               <h1 className='text-xl font-bold text-gray-800 font-root'>Price</h1>
               <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Pricing</p>
               <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Standard</p>
@@ -509,19 +425,19 @@ const next = () => {
               <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Features</p>
             </div>
 
-            <div className='w-48 h-96 flex flex-col ml-20 space-y-5'>
+            <div className='w-48 h-96 flex flex-col ml-20 space-y-5 fade-up'>
               <h1 className='text-xl font-bold text-gray-800 font-root'>Support</h1>
               <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Need help?</p>
               <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Product Updates</p>
               <p className='font-root text-gray-800 cursor-pointer hover:text-gray-600 hover:font-semibold'>Contact Us</p>
             </div>
 
-            <div className='w-48 h-48 flex flex-col space-y-5'>
-              <img src="\src\Images\d on appstore.png" className='cursor-pointer'/>
-              <img src="\src\Images\get it on google play.webp" className='cursor-pointer'/>
+            <div className='w-48 h-48 flex flex-col space-y-5 appstore-imgs fade-up'>
+              <img src="\src\Images\d on appstore.png" className='cursor-pointer appstore-img'/>
+              <img src="\src\Images\get it on google play.webp" className='cursor-pointer appstore-img'/>
             </div>
-            </div>
-                        <hr className='w-full lastLine bg-black -mt-20 opacity-50' />
+          </div>
+          <hr className='w-full lastLine bg-black -mt-20 opacity-50' />
 
               <Footer />
 

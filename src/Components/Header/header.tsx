@@ -152,7 +152,7 @@ export function HeaderComponent () {
             {/* Mobile Dropdown */}
             {mobileMenuOpen && (
                 <div className="fixed inset-0 z-50 bg-black bg-opacity-40 flex lg:hidden">
-                    <div className="bg-white w-4/5 max-w-xs h-full shadow-lg p-6 flex flex-col">
+                    <div className="bg-white w-4/5 max-w-xs h-full shadow-lg p-6 flex flex-col overflow-y-auto menu-scrollable">
                         <button className="self-end mb-6" onClick={handleMobileMenu} aria-label="Close menu">
                             <svg className="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -160,18 +160,120 @@ export function HeaderComponent () {
                         </button>
                         <ul className="flex flex-col space-y-4">
                             <li className="font-semibold text-lg text-gray-800">Menu</li>
-                            <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Pricing</li>
-                            <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Plan 1</li>
-                            <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Plan 2</li>
-                            <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Plan 3</li>
-                            <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Company</li>
-                            <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">About Us</li>
-                            <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Careers</li>
-                            <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Contact</li>
-                            <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Resources</li>
-                            <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Blog</li>
-                            <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Guides</li>
-                            <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Webinars</li>
+                            {/* Pricing Dropdown */}
+                            <li>
+                              <div onClick={() => toggleDropdown('Pricing')} className="flex items-center justify-between cursor-pointer px-2 py-2 hover:bg-gray-100 rounded">
+                                <span>Pricing</span>
+                                <svg className={`w-4 h-4 ml-1 transform transition-transform ${openDropdown === 'Pricing' ? 'rotate-180' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </div>
+                              <div style={openDropdown === 'Pricing' ? {
+                                maxHeight: '200px',
+                                overflow: 'hidden',
+                                transition: 'max-height 0.3s cubic-bezier(0.4,0,0.2,1)',
+                                marginBottom: '0.5rem',
+                                background: '#f9fafb',
+                                borderRadius: '0.5rem',
+                                borderLeft: '2px solid #e5e7eb',
+                                paddingLeft: '0.75rem',
+                                marginTop: '0.25rem',
+                              } : {
+                                maxHeight: '0',
+                                overflow: 'hidden',
+                                transition: 'max-height 0.3s cubic-bezier(0.4,0,0.2,1)',
+                                marginBottom: '0',
+                                background: '#f9fafb',
+                                borderRadius: '0.5rem',
+                                borderLeft: 'none',
+                                paddingLeft: '0',
+                                marginTop: '0',
+                              }}>
+                                {openDropdown === 'Pricing' && (
+                                  <ul className="flex flex-col space-y-2 py-2">
+                                    <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Plan 1</li>
+                                    <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Plan 2</li>
+                                    <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Plan 3</li>
+                                  </ul>
+                                )}
+                              </div>
+                            </li>
+                            {/* Company Dropdown */}
+                            <li>
+                              <div onClick={() => toggleDropdown('Company')} className="flex items-center justify-between cursor-pointer px-2 py-2 hover:bg-gray-100 rounded">
+                                <span>Company</span>
+                                <svg className={`w-4 h-4 ml-1 transform transition-transform ${openDropdown === 'Company' ? 'rotate-180' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </div>
+                              <div style={openDropdown === 'Company' ? {
+                                maxHeight: '200px',
+                                overflow: 'hidden',
+                                transition: 'max-height 0.3s cubic-bezier(0.4,0,0.2,1)',
+                                marginBottom: '0.5rem',
+                                background: '#f9fafb',
+                                borderRadius: '0.5rem',
+                                borderLeft: '2px solid #e5e7eb',
+                                paddingLeft: '0.75rem',
+                                marginTop: '0.25rem',
+                              } : {
+                                maxHeight: '0',
+                                overflow: 'hidden',
+                                transition: 'max-height 0.3s cubic-bezier(0.4,0,0.2,1)',
+                                marginBottom: '0',
+                                background: '#f9fafb',
+                                borderRadius: '0.5rem',
+                                borderLeft: 'none',
+                                paddingLeft: '0',
+                                marginTop: '0',
+                              }}>
+                                {openDropdown === 'Company' && (
+                                  <ul className="flex flex-col space-y-2 py-2">
+                                    <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">About Us</li>
+                                    <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Careers</li>
+                                    <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Contact</li>
+                                  </ul>
+                                )}
+                              </div>
+                            </li>
+                            {/* Resources Dropdown */}
+                            <li>
+                              <div onClick={() => toggleDropdown('Resources')} className="flex items-center justify-between cursor-pointer px-2 py-2 hover:bg-gray-100 rounded">
+                                <span>Resources</span>
+                                <svg className={`w-4 h-4 ml-1 transform transition-transform ${openDropdown === 'Resources' ? 'rotate-180' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </div>
+                              <div style={openDropdown === 'Resources' ? {
+                                maxHeight: '200px',
+                                overflow: 'hidden',
+                                transition: 'max-height 0.3s cubic-bezier(0.4,0,0.2,1)',
+                                marginBottom: '0.5rem',
+                                background: '#f9fafb',
+                                borderRadius: '0.5rem',
+                                borderLeft: '2px solid #e5e7eb',
+                                paddingLeft: '0.75rem',
+                                marginTop: '0.25rem',
+                              } : {
+                                maxHeight: '0',
+                                overflow: 'hidden',
+                                transition: 'max-height 0.3s cubic-bezier(0.4,0,0.2,1)',
+                                marginBottom: '0',
+                                background: '#f9fafb',
+                                borderRadius: '0.5rem',
+                                borderLeft: 'none',
+                                paddingLeft: '0',
+                                marginTop: '0',
+                              }}>
+                                {openDropdown === 'Resources' && (
+                                  <ul className="flex flex-col space-y-2 py-2">
+                                    <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Blog</li>
+                                    <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Guides</li>
+                                    <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Webinars</li>
+                                  </ul>
+                                )}
+                              </div>
+                            </li>
                             <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Support</li>
                             <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">Enterprise</li>
                             <li className="px-2 py-2 hover:bg-gray-100 rounded cursor-pointer">FAQs</li>
