@@ -5,11 +5,11 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true,
-    port: 5173,
+    port: 3000,
     strictPort: true,
     watch: {
       usePolling: true,
     },
-    allowedHosts: ['1255-197-210-227-192.ngrok-free.app'], // <-- Add this line
+    allowedHosts: ['.ngrok-free.app'], // <-- Add this line
   },
 });
