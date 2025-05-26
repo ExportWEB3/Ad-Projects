@@ -6,6 +6,7 @@ import { Icon } from '../Icon.component/Icon';
 import { reviews } from '../../utilities/data';
 import { Input } from '../Input/Input.component';
 import { Footer } from '../footer/footer';
+import { HeaderComponent } from '../Header/header';
 
 
 export function LandingComponent() {
@@ -33,7 +34,9 @@ const next = () => {
 
 
     return  (
-        <div className="w-full h-full flex mt-20 customContainerModified items-center flex-col">
+      <>
+      <HeaderComponent />
+       <div className="w-full h-full flex mt-20 customContainerModified items-center flex-col">
             <div className='w-full h-full flex items-center'>
             <img src="\src\Images\Social.png" className="social" alt="" />
             <div className='w-1/2 h-80 ml-16'>
@@ -141,7 +144,7 @@ const next = () => {
 
                     >x</Button>
                 </div>
-                <img src="\src\Images\brand.jpg" className='w-1/2 rounded-md' />
+                <img src="\src\Images\brand.jpg" className='w-1/2 rounded-md ' />
             </div>
 
             <div className='w-full h-40 mt-28 flex flex-col items-center justify-center space-y-5 fade-up feature-section'>
@@ -444,5 +447,7 @@ const next = () => {
             </div>
             
         </div>
+      </>
+       
     )
 }
