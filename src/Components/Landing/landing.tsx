@@ -7,11 +7,13 @@ import { reviews } from '../../utilities/data';
 import { Input } from '../Input/Input.component';
 import { Footer } from '../footer/footer';
 import { HeaderComponent } from '../Header/header';
+import { useNavigate } from 'react-router-dom';
 
 
 export function LandingComponent() {
 const [current, setCurrent] = useState(0);
 const [direction, setDirection] = useState('');
+const navigate = useNavigate();
 
 const prev = () => {
   setDirection('left');
@@ -49,7 +51,7 @@ const next = () => {
             btnText="Get Started"
             className="w-48 h-14 text-xl bg-gray-800 rounded-xl text-white font-semibold hover:bg-gray-700"
             type="button"
-            onClick={() => {}}
+            onClick={() => navigate('/register')}
             >x</Button>
             <h1 className='text-base underline hover:no-underline font-semibold text-fuchsia-950 hover:text-fuchsia-800  cursor-pointer '>Book a Call</h1>
             </div>
@@ -193,6 +195,7 @@ const next = () => {
                     btnText="Try it for free"
                     className="w-36 h-12 text-base bg-gray-800 text-white border rounded-xl font-semibold hover:bg-gray-600"
                     type="button"
+                    onClick={() => navigate('/register')}
                     >x</Button>
 
                     </div>
@@ -354,7 +357,7 @@ const next = () => {
                     <img src="\src\Images\award.png"/>
                     <h1 className='text-3xl font-bold text-gray-800 font-root'>Take the Tildette Social Media Marketing Certification Course</h1>
                     <p className='text-base text-gray-800 font-semibold'>Become a social media expert — and slap a shiny new certification on your resumé — with the industry standard in social media education.</p>
-                    <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold'>Sign Up Now <span>
+                    <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold' onClick={() => navigate('/register')}>Sign Up Now <span>
                       <Icon
                         icon="ri-arrow-right-line"
                         className="text-gray-800 hover:text-blue-800 cursor-pointer"
@@ -364,6 +367,60 @@ const next = () => {
                   </div>
                 </div>
             </div>
+
+            <div className="w-full review-carousel-section flex flex-col items-center mt-16 mb-16">
+              <h2 className="text-5xl font-bold text-gray-800 font-root mb-8 text-center">What our users say</h2>
+              <div className="review-carousel-wrapper w-full flex justify-center items-center relative">
+                <div className={`review-card-animate ${direction === 'left' ? 'review-card-slide-left' : direction === 'right' ? 'review-card-slide-right' : 'review-card-active'} w-full max-w-md md:max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10 flex flex-col items-center transition-all duration-500`}>
+                  <div className="flex items-center space-x-4 mb-4">
+                    <img src={reviews[current].img} alt={reviews[current].user} className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-gray-200" />
+                    <div className="flex flex-col">
+                      <span className="font-bold text-lg md:text-xl text-gray-800">{reviews[current].user}</span>
+                      <span className="text-sm md:text-base text-gray-500">{reviews[current].role}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center mb-2 review-stars-row">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Icon
+                        key={i}
+                        icon={i < reviews[current].stars ? 'ri-star-fill' : 'ri-star-line'}
+                        className={`text-xl md:text-2xl ${i < reviews[current].stars ? 'text-yellow-400' : 'text-gray-300'}`}
+                      />
+                    ))}
+                  </div>
+                  <p className="text-lg md:text-xl font-semibold text-gray-800 text-center mb-2">{reviews[current].text}</p>
+                  <p className="text-base md:text-lg text-gray-600 text-center mb-4">{reviews[current].desc}</p>
+                  <span className="text-xs md:text-sm text-gray-400">{reviews[current].date}</span>
+                </div>
+                {/* Carousel Arrows: Only 2, always below the card, for all views */}
+                <div className="review-carousel-arrows flex justify-center items-center gap-8 mt-6 w-full">
+                  <button
+                    className="review-carousel-arrow bg-white rounded-full shadow p-2 hover:bg-gray-100 transition"
+                    onClick={prev}
+                    aria-label="Previous review"
+                  >
+                    <Icon icon="ri-arrow-left-s-line" className="text-3xl text-gray-800" />
+                  </button>
+                  <button
+                    className="review-carousel-arrow bg-white rounded-full shadow p-2 hover:bg-gray-100 transition"
+                    onClick={next}
+                    aria-label="Next review"
+                  >
+                    <Icon icon="ri-arrow-right-s-line" className="text-3xl text-gray-800" />
+                  </button>
+                </div>
+              </div>
+              <div className="flex justify-center mt-6 space-x-2 md:space-x-3 review-dots-row">
+                {reviews.map((_, idx) => (
+                  <span
+                    key={idx}
+                    className={`inline-block w-2 h-2 md:w-3 md:h-3 rounded-full ${current === idx ? 'bg-gray-800' : 'bg-gray-300'} transition-all`}
+                    style={{ margin: '0 2px' }}
+                  ></span>
+                ))}
+              </div>
+            </div>
+            
 
             <div className='w-full h-96 mt-14 bg-gray-100 px-5 space-x-5 items-center flex fade-up'>
               <img src="\src\Images\lastPic.png" className='' />
@@ -375,6 +432,7 @@ const next = () => {
               btnText="Start your Free 30-day Trial"
               className="w-72 h-14 text-base bg-gray-800 rounded-lg text-white font-semibold hover:bg-gray-700"
               type="button"
+              onClick={() => navigate('/register')}
               >x</Button>
               <p className='text-xl font-semibold cursor-pointer hover:text-blue-800 text-gray-800 underline hover:no-underline ml-7'>Request a Demo</p>
               </div>
@@ -445,6 +503,7 @@ const next = () => {
               <Footer />
 
             </div>
+
             
         </div>
       </>
