@@ -135,7 +135,7 @@ export function HeaderComponent () {
                 </div>
             </div>
             <div className='w-1/4 h-full  items-center justify-center hidden lg:flex'>
-                <h1 className='text-base font-semibold text-gray-800 hover:text-blue-800 cursor-pointer'>Login</h1>
+                <h1 className='text-base font-semibold text-gray-800 hover:text-blue-800 cursor-pointer' onClick={() => navigate('/login')}>Login</h1>
                 <Button 
                     btnText="Start your free trial" 
                     className="ml-10 w-44 bg-gray-800 rounded-lg text-white font-semibold hover:bg-gray-700" 
@@ -273,7 +273,7 @@ export function HeaderComponent () {
                             className="w-full bg-gray-800 rounded-lg text-white font-semibold hover:bg-gray-700" 
                             type="button" 
                             onClick={() => navigate('/register')}>x</Button>
-                        <h1 className='text-base font-semibold text-gray-800 hover:text-blue-800 cursor-pointer text-center'>Login</h1>
+                        <h1 className='text-base font-semibold text-gray-800 hover:text-blue-800 cursor-pointer text-center' onClick={() => navigate('/login')}>Login</h1>
                     </div>
                 </div>
                 <div className="flex-1" onClick={handleMobileMenu}></div>
