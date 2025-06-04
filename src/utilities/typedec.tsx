@@ -78,6 +78,9 @@ export type actionAttributes =
 export interface toastAttributes {
   text?: string;
   state: boolean;
+  icon?: string;
+  iconClassName?: string; 
+  backgroundColor?: string; // Added optional backgroundColor property
 }
 
 export interface globalUseContextStateAttributes {
@@ -148,4 +151,5 @@ export type createProductsAttributes =
 export interface iconAttributes {
   icon: string;
   className?: string;
+  onClick?: React.MouseEventHandler<HTMLElement>; // Updated onClick type for compatibility
 }
