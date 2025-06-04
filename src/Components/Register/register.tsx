@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './register.css';
 import { useNavigate } from 'react-router-dom';
+import { GlobalUseContext } from '../../Context/context';
 
 export function RegisterComponent () {
     const navigate = useNavigate();
+    const { state, dispatch } = useContext(GlobalUseContext);
 
 
     const handleGoogleSignUp = () => {
@@ -15,25 +17,40 @@ export function RegisterComponent () {
 
             // Check if the email already exists
             if (users.includes(email)) {
-                alert(`Email already exists. Redirecting to login page...`);
-                setTimeout(() => {
+                dispatch({
+                    type: "SET_TOAST",
+                    payload: { 
+                        state: true, 
+                        text: "Email already exists! Redirecting to Login......", 
+                        icon: "ri-error-warning-fill",
+                        backgroundColor: "red",
+                    },
+                });  
+               setTimeout(() => {
                     window.location.href = '/login';
-                }, 1000);
+                }, 3000); 
                 return;
             }
 
             // Save new email to localStorage
             users.push(email);
             localStorage.setItem('users', JSON.stringify(users));
-            alert(`Signed up successfully with email: ${email}`);
-
+              dispatch({
+              type: "SET_TOAST",
+            payload: { 
+                state: true, 
+                text: "Email Confirmed! Redirecting to Login......", 
+                icon: "ri-check-fill",
+                iconClassName: ""
+            },
+             });
             // Redirect to login page after 1 second
             setTimeout(() => {
                 window.location.href = '/login';
-            }, 1000);
+            }, 3000);
         } else {
-            alert("Sign up canceled or failed.");
-        }
+            alert("Sign up canceled or failed."); 
+        } 
     };
 
     return (
