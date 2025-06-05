@@ -27,47 +27,7 @@ import { actionAttributes, initialStateAttributes, productsAttrubutes, toastAttr
           user: null,
         };
   
-      case "ADD_CARTCOUNT":
-        return {
-          ...state,
-          cartCount: Number(state?.cartCount) + Number(1),
-        };
-  
-      case "SUBTRACT_CARTCOUNT":
-        return {
-          ...state,
-          cartCount: Number(state?.cartCount) - Number(1),
-        };
-  
-      case "SET_REGISTER_USER":
-        let tempUsers = [...state?.users] as userAttributes[];
-  
-        tempUsers.push(action.payload);
-        return {
-          ...state,
-          users: tempUsers,
-        };
-  
-      case "SET_CREATE_PRODUCT":
-        let tempProducts: productsAttrubutes[] = [...state?.products];
-        tempProducts?.push(action.payload);
-  
-        return {
-          ...state,
-          products: tempProducts,
-        };
-  
-      case "DELETE_PRODUCT":
-        let tempItems = [...state.products] as productsAttrubutes[];
-  
-        const updatedProducts = tempItems?.filter(
-          (item, index) => item?.id !== action.payload
-        );
-  
-        return {
-          ...state,
-          products: updatedProducts,
-        };
+
       default:
         return state;
     }

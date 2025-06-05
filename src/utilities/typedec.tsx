@@ -7,17 +7,9 @@ export interface layoutAttributes {
 export interface initialStateAttributes {
   user: userAttributes | null;
   isToastState: toastAttributes;
-  cartCount: number;
   users: userAttributes[];
-  products: productsAttrubutes[];
-  cart: cartAttributes | null;
 }
 
-export interface cartAttributes {
-  products: productsAttrubutes[];
-  totalPrice: string;
-  userId: number;
-}
 
 export interface productsAttrubutes {
   productName: string;
@@ -30,12 +22,9 @@ export interface productsAttrubutes {
 }
 
 export interface userAttributes {
-  firstName?: string;
-  lastName?: string;
   password: string;
   email: string;
-  id?: number;
-  role?: userRolesAttributes;
+  confirmPassword?: string;
 }
 
 export type userRolesAttributes = "admin_user" | "customer_user";
@@ -56,24 +45,6 @@ export type actionAttributes =
   | {
       type: "CLEAR_USER";
     }
-  | {
-      type: "ADD_CARTCOUNT";
-    }
-  | {
-      type: "SUBTRACT_CARTCOUNT";
-    }
-  | {
-      type: "SET_REGISTER_USER";
-      payload: userAttributes;
-    }
-  | {
-      type: "SET_CREATE_PRODUCT";
-      payload: productsAttrubutes;
-    }
-  | {
-      type: "DELETE_PRODUCT";
-      payload: string | number;
-    };
 
 export interface toastAttributes {
   text?: string;
@@ -93,18 +64,7 @@ export interface buttonAttributes {
   onClick?: Function;
 }
 
-export interface menuDataAttributes {
-  menuName: menuDataNameAttributes;
-  link: string;
-}
 
-export type menuDataNameAttributes =
-  | "Login"
-  | "Log out"
-  | "Register"
-  | "Home"
-  | "Cart"
-  | "Dashboard";
 
 export interface inputAttributes {
   placeHolder?: string;
@@ -119,11 +79,18 @@ export interface inputAttributes {
   displayTextClassName?: string; // NEW: allow custom class for display text
 }
 
+export type registerationDataAttributes = {
+  field: registeruserAttributes
+  name: registerationNameAttributes
+}
+
+export type registerationNameAttributes =  "email" | "password" | "confirmPassword";
+
+
 export type registeruserAttributes =
-  | "First Name"
-  | "Last Name"
   | "Password"
-  | "Email";
+  | "Email"
+  | "Confirm Password";
 
 export interface CustomButtonAttributes {
   btnText: string;
@@ -140,13 +107,6 @@ export interface loginAttributes {
   password: string;
 }
 
-export type createProductsAttributes =
-  | "Product Name"
-  | "Description"
-  | "Price"
-  | "Availability"
-  | "Image"
-  | "Quantity";
 
 export interface iconAttributes {
   icon: string;
