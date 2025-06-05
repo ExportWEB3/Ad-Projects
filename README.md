@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Ad Platform - README</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+  <div class="max-w-3xl mx-auto p-8">
+    <h1 class="text-4xl font-bold text-indigo-700 mb-4">🚀 AI-Powered Ad Platform</h1>
+    <p class="text-lg text-gray-700 mb-6">
+      A modern fullstack web app that allows users to register, log in, and use AI to get the smartest strategies for running advertisements globally.
+    </p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    <h2 class="text-2xl font-semibold text-indigo-600 mb-2">🔧 Features</h2>
+    <ul class="list-disc list-inside mb-6 text-gray-800">
+      <li>User Registration with instant toast feedback</li>
+      <li>Automatic redirect to login after signup</li>
+      <li>User login with dashboard access</li>
+      <li>Interactive dashboard with AI prompt input</li>
+      <li>AI-generated suggestions for effective advertisement strategy</li>
+    </ul>
 
-Currently, two official plugins are available:
+    <h2 class="text-2xl font-semibold text-indigo-600 mb-2">🧰 Tech Stack</h2>
+    <ul class="list-disc list-inside mb-6 text-gray-800">
+      <li><strong>Frontend:</strong> HTML, CSS, Tailwind CSS, JavaScript, TypeScript</li>
+      <li><strong>Backend:</strong> Node.js, Express.js</li>
+      <li><strong>Database:</strong> MongoDB</li>
+      <li><strong>AI:</strong> Integrated via API (e.g., OpenAI)</li>
+    </ul>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    <h2 class="text-2xl font-semibold text-indigo-600 mb-2">🚀 How It Works</h2>
+    <ol class="list-decimal list-inside mb-6 text-gray-800">
+      <li>User signs up and sees a success toast</li>
+      <li>User is redirected to the login page</li>
+      <li>Upon login, user accesses a personalized dashboard</li>
+      <li>User enters an ad-related query (e.g. "How do I promote a fashion brand in the US?")</li>
+      <li>AI returns a detailed strategy tailored to the user’s input</li>
+    </ol>
 
-## Expanding the ESLint configuration
+    <h2 class="text-2xl font-semibold text-indigo-600 mb-2">📦 Installation</h2>
+    <pre class="bg-gray-100 p-4 rounded mb-6 text-sm overflow-x-auto">
+# Clone the repo
+git clone https://github.com/your-username/ai-ad-platform.git
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Navigate into the project
+cd ai-ad-platform
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+# Install dependencies
+npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Start the server
+npm start
+    </pre>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+    <h2 class="text-2xl font-semibold text-indigo-600 mb-2">🙌 Contribution</h2>
+    <p class="mb-6 text-gray-700">Feel free to fork this project and submit a pull request. All suggestions and improvements are welcome!</p>
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+    <footer class="text-center text-sm text-gray-500 mt-12">
+      Made with ❤️ by Emmanuel
+    </footer>
+  </div>
+</body>
+</html>
