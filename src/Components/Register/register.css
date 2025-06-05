@@ -17,6 +17,12 @@
     justify-content: center;
     align-items: center;
   }
+  .register-mobile-btn {
+    margin-top: 50px !important;
+  }
+  .register-title-mobile {
+    font-size: 2rem !important;
+  }
 }
 
 .continue-to-login{

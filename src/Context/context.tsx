@@ -7,9 +7,6 @@ const intialState: initialStateAttributes = {
   user: null,
   users: [],
   isToastState: { state: false, text: "" },
-  cartCount: 0,
-  cart: null,
-  products: JSON.parse(localStorage.getItem("products") as string) || [],
 };
 
 export const GlobalUseContext = createContext<globalUseContextStateAttributes>({

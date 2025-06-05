@@ -146,7 +146,7 @@ const next = () => {
 
                     >x</Button>
                 </div>
-                <img src="\src\Images\brand.jpg" className='w-1/2 rounded-md ' />
+                <img src="\src\Images\mid.png" className='w-1/2 rounded-md ' />
             </div>
 
             <div className='w-full h-40 mt-28 flex flex-col items-center justify-center space-y-5 fade-up feature-section'>

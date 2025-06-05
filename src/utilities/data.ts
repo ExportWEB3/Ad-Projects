@@ -1,5 +1,7 @@
 // In src/utilities/data.ts
 
+import { registerationDataAttributes } from "./typedec";
+
 export const reviews = [
   {
     date: "Apr 24, 2025",
@@ -45,5 +47,21 @@ export const reviews = [
     user: "Taylor R.",
     role: "Marketing Analyst",
     img: "/src/Images/taylor.webp"
+  }
+];
+
+
+export const RegisterData: registerationDataAttributes[] = [
+  {
+    field: 'Email',
+    name: "email",
+  },
+  {
+    field: 'Password',
+    name: "password",
+  },
+  {
+    field: 'Confirm Password',
+    name: "confirmPassword",
   }
 ];
