@@ -1,0 +1,22 @@
+/* ...existing code... */
+@media (max-width: 768px) and (min-width: 320px) {
+  .login-signin-heading {
+    text-align: center !important;
+    font-size: 30px !important;
+    margin-top: 2.5rem !important;
+  }
+  .mobileX{
+    margin-top: -30px !important;
+  }
+  .mobileF{
+    margin-top: 30px !important;
+  }
+  .mobileSignIn{
+    margin-top: 50px !important;
+    margin-bottom: 10px !important;
+  }
+  .mobileLowTxt{
+    margin-top: 15px !important;
+  }
+}
+/* ...existing code... */
