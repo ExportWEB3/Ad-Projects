@@ -73,7 +73,7 @@ export function RegisterComponent () {
                                     },
                                 });
                                 setTimeout(() => {
-                                    window.location.href = '/login';
+                                    navigate('/login');
                                 }, 3000);
                                 return;
                             }
@@ -96,13 +96,13 @@ export function RegisterComponent () {
                             });
                             
                             setTimeout(() => {
-                                window.location.href = '/login';
+                                navigate('/login');
                             }, 3000);
            }
 
     const handleGoogleSignUp = () => {
         // Simulate Google Authentication
-        const email = prompt("Enter my Google email for authentication:"); 
+        const email = prompt("Enter your Google email for authentication:"); 
         if (email) {
             // Retrieve existing users from localStorage
             const users = JSON.parse(localStorage.getItem('users') || '[]'); // Ensure default is an empty array
@@ -119,7 +119,7 @@ export function RegisterComponent () {
                     },
                 });  
                setTimeout(() => {
-                    window.location.href = '/login';
+                    navigate('/login');
                 }, 3000); 
                 return;
             }
@@ -148,7 +148,7 @@ export function RegisterComponent () {
              });
             // Redirect to login page after 1 second
             setTimeout(() => {
-                window.location.href = '/login';
+                navigate('/login');
             }, 3000);
         } else {
             alert("Sign up canceled or failed."); 
