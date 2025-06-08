@@ -16,6 +16,7 @@ export default {
         h95: "95%",
         h90: "90%",
         h85: "85%",
+        h80: "80%",
       },
       screens: {
         xsm: "320px",

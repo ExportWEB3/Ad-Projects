@@ -91,9 +91,9 @@ export function LoginComponent () {
     return;
     }
 
-    const isFormValid = () => {
+  /*  const isFormValid = () => {
       return loginState.email.trim().length > 0 && loginState.password.trim().length > 0;
-    }
+    } */
 
     return (
         <div className='w-full h-screen flex'>
@@ -145,7 +145,6 @@ export function LoginComponent () {
              btnText='Sign in'
              onClick={handleLogin}
              className='w-full h-10 bg-gray-800 mt-20 text-gray-400 cursor-pointer font-semibold mobileSignIn'
-             disabled={!isFormValid}
              >x</Button>
 
             <Button 

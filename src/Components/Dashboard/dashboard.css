@@ -1,0 +1,57 @@
+.dashboard-bg {
+    min-height: 100vh;
+    width: 100vw;
+    /* Deeper blue, purple, and peach gradient */
+    background: white;
+}
+.h-display{
+    height: 100%;
+    width: 80%;
+    scrollbar-width: thin;
+  scrollbar-color: #646464 #bababa00;
+}
+.h-Ogr{
+    height: 550px;
+}
+.h-display::-webkit-scrollbar {
+  width: 10px !important;
+  background: #e0e7ef;
+  border-radius: 8px;
+}
+
+.h-display::-webkit-scrollbar-thumb {
+  background: #5e5e62;
+  border-radius: 8px;
+  border: 2px solid #e0e7ef;
+}
+
+.h-display::-webkit-scrollbar-thumb:hover {
+  background: #090a21;
+}
+
+.ai-reply {
+  color: #333;
+  text-align: left;
+  align-self: flex-start;
+  border-bottom: 1px solid #000000;
+    font-size: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.user-reply {
+  background-color: #e0e7ef;
+  color: #222;
+  text-align: right;
+  align-self: flex-end;
+}
+
+.scale-left > * {
+  transition: transform 0.2s;
+}
+
+.scale-left:hover > * {
+  transform: scale(1.15);
+  transition: transform 0.2s;
+  z-index: 1;
+}
