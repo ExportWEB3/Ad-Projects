@@ -8,12 +8,12 @@ export function ToastComponent() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (state?.isToastState?.state) {
+    if (state?.isToastState?.notificationState) {
       setIsVisible(true);
       setTimeout(() => {
         setIsVisible(false); 
         setTimeout(() => {
-          dispatch({ type: "CLEAR_TOAST", payload: { state: false, text: "", icon: "", iconClassName: "", backgroundColor: "" } });
+          dispatch({ type: "CLEAR_TOAST", payload: { notificationState: false, notificationText: "", icon: "", iconClassName: "", backgroundColor: "" } });
         }, 500); // Delay dispatch to allow transition
       }, 3000);
     }
@@ -22,7 +22,7 @@ export function ToastComponent() {
   const handleClose = () => {
     setIsVisible(false);
     setTimeout(() => {
-      dispatch({ type: "CLEAR_TOAST", payload: { state: false, text: "", icon: "", iconClassName: "", backgroundColor: "" } });
+      dispatch({ type: "CLEAR_TOAST", payload: { notificationState: false, notificationText: "", icon: "", iconClassName: "", backgroundColor: "" } });
     }, 200); // Delay dispatch to allow transition
   };
 
@@ -45,7 +45,7 @@ export function ToastComponent() {
           />
         </div>
         <p className="popUpText font-root font-medium font-gray-800 ml-3">
-          {state?.isToastState?.text ? state?.isToastState?.text : "Default Toast Message"}
+          {state?.isToastState?.notificationText ? state?.isToastState?.notificationText : "Default Toast Message"}
         </p>
         <Icon
           icon="ri-close-fill"

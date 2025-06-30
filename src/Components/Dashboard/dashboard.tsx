@@ -5,11 +5,9 @@ import { Input } from '../Input/Input.component'
 import './dashboard.css'
 import { useState } from 'react';
 
-type ChatMessage = { from: "user" | "ai"; text: string };
 
 export function DashboardComponent() {
   const [userInput, setUserInput] = useState("");
-  const [chatHistory, setChatHistory] = useState<ChatMessage[]>([]);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 

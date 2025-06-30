@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './landing.css'
 import { Button } from '../Button/button';
 import { UseFadeUpOnScroll } from '../Fade-up/fadeUp';
@@ -14,6 +14,7 @@ export function LandingComponent() {
 const [current, setCurrent] = useState(0);
 const [direction, setDirection] = useState('');
 const navigate = useNavigate();
+
 
 const prev = () => {
   setDirection('left');
@@ -31,9 +32,25 @@ const next = () => {
   }, 500);
 };
 
+
+// Custom hook to apply fade-up effect on scroll 
     UseFadeUpOnScroll();
 
 
+// Effect to restore scroll position on component mount
+    // This effect runs once when the component mounts and restores the scroll position if it was saved
+    useEffect(() => {
+      const saved = sessionStorage.getItem("landing-scroll");
+      if (saved) {
+        window.scrollTo(0, parseInt(saved, 10));
+        sessionStorage.removeItem("landing-scroll");
+      }
+    }, []);
+    // Save scroll position and navigate
+    const navigateWithScroll = (to: string) => {
+      sessionStorage.setItem("landing-scroll", String(window.scrollY));
+      navigate(to);
+    };
 
     return  (
       <>
@@ -51,7 +68,7 @@ const next = () => {
             btnText="Get Started"
             className="w-48 h-14 text-xl bg-gray-800 rounded-xl text-white font-semibold hover:bg-gray-700"
             type="button"
-            onClick={() => navigate('/register')}
+            onClick={() => navigateWithScroll('/register')}
             >x</Button>
             <h1 className='text-base underline hover:no-underline font-semibold text-fuchsia-950 hover:text-fuchsia-800  cursor-pointer '>Book a Call</h1>
             </div>
@@ -195,7 +212,7 @@ const next = () => {
                     btnText="Try it for free"
                     className="w-36 h-12 text-base bg-gray-800 text-white border rounded-xl font-semibold hover:bg-gray-600"
                     type="button"
-                    onClick={() => navigate('/register')}
+                    onClick={() => navigateWithScroll('/register')}
                     >x</Button>
 
                     </div>
@@ -357,7 +374,7 @@ const next = () => {
                     <img src="\src\Images\award.png"/>
                     <h1 className='text-3xl font-bold text-gray-800 font-root'>Take the Tildette Social Media Marketing Certification Course</h1>
                     <p className='text-base text-gray-800 font-semibold'>Become a social media expert — and slap a shiny new certification on your resumé — with the industry standard in social media education.</p>
-                    <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold' onClick={() => navigate('/register')}>Sign Up Now <span>
+                    <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer' onClick={() => navigateWithScroll('/register')}>Sign Up Now <span>
                       <Icon
                         icon="ri-arrow-right-line"
                         className="text-gray-800 hover:text-blue-800 cursor-pointer"
@@ -432,7 +449,7 @@ const next = () => {
               btnText="Start your Free 30-day Trial"
               className="w-72 h-14 text-base bg-gray-800 rounded-lg text-white font-semibold hover:bg-gray-700"
               type="button"
-              onClick={() => navigate('/register')}
+              onClick={() => navigateWithScroll('/register')}
               >x</Button>
               <p className='text-xl font-semibold cursor-pointer hover:text-blue-800 text-gray-800 underline hover:no-underline ml-7'>Request a Demo</p>
               </div>

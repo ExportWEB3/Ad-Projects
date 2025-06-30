@@ -10,7 +10,7 @@ export function PublicLayout({ children }: layoutAttributes) {
 
   return (
     <div className="width100 height100 flex flex-column">
-      {state?.isToastState?.state && <ToastComponent />}
+      {state?.isToastState?.notificationText && <ToastComponent />}
       {children}
     </div>
   );

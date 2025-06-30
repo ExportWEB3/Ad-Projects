@@ -53,6 +53,10 @@ export const reviews = [
 
 export const RegisterData: registerationDataAttributes[] = [
   {
+    field: 'Full Name',
+    name: "fullName",
+  },
+  {
     field: 'Email',
     name: "email",
   },
@@ -63,5 +67,6 @@ export const RegisterData: registerationDataAttributes[] = [
   {
     field: 'Confirm Password',
     name: "confirmPassword",
-  }
+  },
+
 ];
