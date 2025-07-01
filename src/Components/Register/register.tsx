@@ -48,6 +48,7 @@ export function RegisterComponent () {
         };
 
         if (!registerUser.email || !registerUser.password || !registerUser.confirmPassword || !registerUser.fullName) {
+            // Show toast using your notification system
             dispatch({
                 type: "SET_TOAST",
                 payload: {
@@ -59,18 +60,7 @@ export function RegisterComponent () {
             });
             return;
         }
-        if (registerUser.password !== registerUser.confirmPassword) {
-            dispatch({
-                type: "SET_TOAST",
-                payload: {
-                    notificationState: true,
-                    notificationText: "Passwords do not match!",
-                    icon: "ri-error-warning-fill",
-                    backgroundColor: "red ",
-                },
-            });
-            return;
-        }
+
 
         try {
             const res = await fetchIt({
@@ -103,15 +93,7 @@ export function RegisterComponent () {
             });
 
         } catch (error) {
-            return dispatch({
-                type: "SET_TOAST",
-                payload: {
-                    notificationState: true,
-                    notificationText: (error as errorResponse).message || "Registration failed. Please try again.",
-                    icon: "ri-error-warning-fill",
-                    backgroundColor: "red ",
-                },
-            });
+            return
         }
     };
 
@@ -166,7 +148,7 @@ export function RegisterComponent () {
             <img src="/src/Images/registerPag.png" className="hidden md:block h-full w-1/3 object-cover" />
             <img src="/src/Images/registerPag.png" className="block md:hidden absolute inset-0 w-full h-full object-cover opacity-30 z-0" style={{ pointerEvents: 'none' }} />
             {/* Content */}
-            <div className='w-full md:w-8/12 h-full p-4 md:p-20 flex items-center justify-center absolute md:static top-0 left-0 z-10 overflow-y-auto'>
+            <div className='w-full md:w-8/12 h-full p-4 md:p-20 flex items-center justify-center absolute md:static top-0 left-0 overflow-y-auto'>
                 <div className='w-full md:w-w48 bg-white mt-40 register-container md:bg-opacity-100 rounded-xl md:rounded-none p-6 md:p-0 shadow-lg md:shadow-none h-full md:h-auto'>
                     <h1 className='text-3xl md:text-4xl font-root font-bold mt-10 register-title-mobile'>Let's create your account</h1>
                     <p className='mt-6 md:mt-10 text-base'>Sign up with social and add your first social account in one step</p>

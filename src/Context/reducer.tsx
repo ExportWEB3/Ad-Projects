@@ -1,4 +1,4 @@
-import { actionAttributes, initialStateAttributes, productsAttrubutes, toastAttributes, userAttributes } from "../utilities/typedec";
+import { actionAttributes, initialStateAttributes, isNotificationPopAttributes, productsAttrubutes, toastAttributes, userAttributes } from "../utilities/typedec";
 
   
   const Reducer = (state: initialStateAttributes, action: actionAttributes) => {
@@ -9,23 +9,36 @@ import { actionAttributes, initialStateAttributes, productsAttrubutes, toastAttr
           user: action.payload as userAttributes,
         };
   
-      case "SET_TOAST":
-        return {
-          ...state,
-          isToastState: action.payload as toastAttributes,
-        };
-  
-      case "CLEAR_TOAST":
-        return {
-          ...state,
-          isToastState: action.payload as toastAttributes,
-        };
+    case "SET_TOAST":
+      return {
+        ...state,
+        isToastState: action.payload as isNotificationPopAttributes,
+      };
+
+    case "CLEAR_TOAST":
+      return {
+        ...state,
+        isToastState: action.payload as isNotificationPopAttributes,
+      };
   
       case "CLEAR_USER":
         return {
           ...state,
           user: null,
         };
+
+      case "ISLOADING_START":
+        return {
+          ...state,
+          isLoading: true,
+        };
+
+      case "ISLOADING_END":
+        return {
+          ...state,
+          isLoading: false,
+        }
+      
   
 
       default:

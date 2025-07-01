@@ -1,12 +1,13 @@
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useReducer } from "react";
 
 import Reducer from "./reducer";
 import { globalUseContextStateAttributes, initialStateAttributes, layoutAttributes } from "../utilities/typedec";
 
 const intialState: initialStateAttributes = {
   user: null,
-  users: [],
-  isToastState: { state: false, text: "" },
+  accessToken: "",
+  isLoading : false,
+  isToastState: { notificationState: false, notificationText: '', icon: '', iconClassName: '', backgroundColor: '' }, // Ensure all toast fields are present
 };
 
 export const GlobalUseContext = createContext<globalUseContextStateAttributes>({

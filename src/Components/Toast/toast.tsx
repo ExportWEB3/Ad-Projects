@@ -26,6 +26,8 @@ export function ToastComponent() {
     }, 200); // Delay dispatch to allow transition
   };
 
+  
+
   return (
     <div
       className={`pop zIndex10 flex justify-center h-screen fixed transition-transform duration-500 ${
@@ -45,7 +47,7 @@ export function ToastComponent() {
           />
         </div>
         <p className="popUpText font-root font-medium font-gray-800 ml-3">
-          {state?.isToastState?.notificationText ? state?.isToastState?.notificationText : "Default Toast Message"}
+          {state?.isToastState?.notificationText ? state?.isToastState?.notificationText : "Item added"}
         </p>
         <Icon
           icon="ri-close-fill"
