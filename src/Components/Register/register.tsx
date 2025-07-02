@@ -91,55 +91,71 @@ export function RegisterComponent () {
                     iconClassName: "text-white",
                 },
             });
-
-        } catch (error) {
-            return
-        }
-    };
-
-    const handleGoogleSignUp = () => {
-        // Simulate Google Authentication
-        const email = prompt("Enter your Google email for authentication:");
-        if (email) {
-            // Retrieve existing users from localStorage
-            const users = JSON.parse(localStorage.getItem('users') || '[]'); // Ensure default is an empty array
-
-            // Check if the email already exists
-            if (users.includes(email)) {
-                dispatch({
-                    type: "SET_TOAST",
-                    payload: {
-                        notificationState: true,
-                        notificationText: "Account already exists! Redirecting to Login......",
-                        icon: "ri-error-warning-fill",
-                        backgroundColor: "red ",
-                    },
-                });
-                setTimeout(() => {
-                    navigate('/login');
-                }, 3000);
-                return;
-            }
-
-            // Save new email to localStorage
-            users.push(email);
-            localStorage.setItem('users', JSON.stringify(users));
+            navigate('/otp', { state: { email: registerUser.email, userId: res?.payload } }); return;
+        } catch (error: any) {
+            // Handle error and show toast notification
+            const message = error?.message || "Registration failed. Please try again.";
             dispatch({
                 type: "SET_TOAST",
                 payload: {
                     notificationState: true,
-                    notificationText: "Email Confirmed! Redirecting to Login......",
-                    icon: "ri-check-fill",
-                    iconClassName: ""
+                    notificationText: message,
+                    icon: "ri-error-warning-fill",
+                    backgroundColor: "red",
                 },
             });
-            // Redirect to login page after 1 second
-            setTimeout(() => {
-                navigate('/login');
-            }, 3000);
-        } else {
-            alert("Sign up canceled or failed.");
         }
+    };
+
+    const handleGoogleSignUp = () => {
+        // Open Google OAuth in a popup window
+        const googleAuthUrl = "http://localhost:4000/auth/google";
+        const width = 500;
+        const height = 600;
+        const left = window.screenX + (window.outerWidth - width) / 2;
+        const top = window.screenY + (window.outerHeight - height) / 2;
+        const popup = window.open(
+            googleAuthUrl,
+            "GoogleSignUp",
+            `width=${width},height=${height},left=${left},top=${top},status=no,toolbar=no,menubar=no`
+        );
+
+        // Listen for message from backend (token or user info)
+        const handleMessage = (event: MessageEvent) => {
+            // Only accept messages from your backend origin
+            if (event.origin !== "http://localhost:4000") return;
+            if (event.data && event.data.type === "GOOGLE_AUTH_SUCCESS") {
+                // You can store token, user info, etc.
+                dispatch({
+                    type: "SET_TOAST",
+                    payload: {
+                        notificationState: true,
+                        notificationText: "Google sign up successful! Redirecting to dashboard...",
+                        icon: "ri-check-fill",
+                        backgroundColor: "green",
+                        iconClassName: "text-white",
+                    },
+                });
+                // Optionally redirect after a short delay
+                setTimeout(() => {
+                    window.location.href = "/dashboard"; // or navigate("/dashboard")
+                }, 2000);
+            } else if (event.data && event.data.type === "GOOGLE_AUTH_ERROR") {
+                dispatch({
+                    type: "SET_TOAST",
+                    payload: {
+                        notificationState: true,
+                        notificationText: "Google sign up failed.",
+                        icon: "ri-error-warning-fill",
+                        backgroundColor: "red",
+                    },
+                });
+            }
+            window.removeEventListener("message", handleMessage);
+            if (popup) popup.close();
+        };
+
+        window.addEventListener("message", handleMessage);
     };
 
     return (

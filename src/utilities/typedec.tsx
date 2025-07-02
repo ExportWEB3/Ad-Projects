@@ -144,6 +144,13 @@ export interface buttonAttributes {
 
 
 
+export interface loginAttributes {
+  email: string;
+  password: string;
+}
+
+
+
 export interface inputAttributes {
   placeHolder?: string;
   type: "text" | "password" | "radio";

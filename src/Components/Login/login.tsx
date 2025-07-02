@@ -37,8 +37,8 @@ export function LoginComponent () {
             dispatch({
                 type: 'SET_TOAST',
                 payload: {
-                    state: true,
-                    text: 'Please fill in both email and password.',
+                    notificationState: true,
+                    notificationText: 'Please fill in both email and password.',
                     icon: 'ri-error-warning-fill',
                     iconClassName: 'text-red-500',
                     backgroundColor: 'red',
@@ -51,8 +51,8 @@ export function LoginComponent () {
             dispatch({
                 type: 'SET_TOAST',
                 payload: {
-                    state: true,
-                    text: 'Email or password is incorrect.',
+                    notificationState: true,
+                    notificationText: 'Email or password is incorrect.',
                     icon: 'ri-error-warning-fill',
                     iconClassName: 'text-red-500',
                     backgroundColor: 'red',
@@ -69,24 +69,17 @@ export function LoginComponent () {
             dispatch({
                 type: "SET_TOAST",
                 payload: {
-                    state: true,
-                    text: "Invalid email or password.",
+                    notificationState: true,
+                    notificationText: "Invalid email or password.",
                     backgroundColor: 'red',
                 },
             });
             return;
         }
 
-    //prepare the user object
-    const logInObj: userAttributes = {
-      email: findUser.email,
-      password: findUser.password,
-    };
-
     // update the global state with the user object
-    dispatch({ type: "STORE_USER", payload: logInObj });
+    dispatch({ type: "STORE_USER", payload: findUser });
 
-    localStorage.setItem("onlineId", logInObj.email);
     navigate("/dashboard");
     return;
     }
@@ -138,7 +131,7 @@ export function LoginComponent () {
     )}
 </span>
 
-             <p className='text-gray-800 font-semibold font-root absolute right-3 cursor-pointer underline hover:no-underline mt-5'>Forgot Password</p>
+             <p onClick={() => navigate('/forgot/password')} className='text-gray-800 font-semibold font-root absolute right-3 cursor-pointer underline hover:no-underline mt-5'>Forgot Password</p>
 
              <Button 
              type='button'

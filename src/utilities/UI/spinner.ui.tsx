@@ -5,10 +5,6 @@ import { useEffect, useState } from "react";
 export function SpinnerComponent (){
     const [visible, setVisible] = useState(true);
 
-    useEffect(() => {
-        const timer = setTimeout(() => setVisible(false), 2000); // 2 seconds
-        return () => clearTimeout(timer);
-    }, []);
 
     if (!visible) return null;
 

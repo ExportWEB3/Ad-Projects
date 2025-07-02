@@ -36,54 +36,53 @@ export const useHttpFetcher = () => {
         },
       });
 
-      if (isSuccessNotification?.notificationState && httpMethod !== "get") {
-        notify({
-          notificationText:
-            isSuccessNotification?.notificationText || "Success",
-          isURL: isSuccessNotification?.isURL || false,
-          URL: isSuccessNotification?.URL || "",
-          isTimer: isSuccessNotification?.isTimer || true,
-          timer: timerDuration ? timerDuration : "3000",
-          bgColour: isSuccessNotification?.bgColour,
-          isNavigation: isSuccessNotification?.isNavigation || true,
-          isRevalidate: isSuccessNotification?.isRevalidate || false,
-          isRevaliddateURL: isSuccessNotification?.isRevaliddateURL,
-        });
-      }
-      dispatch({type: 'ISLOADING_END'})
-      return res?.data as errorResponse;
-    } catch (error) {
-            dispatch({type: 'ISLOADING_END'})
-      if (error instanceof AxiosError) {
-        if (httpMethod !== "get") {
-           throw notify({
-            notificationText:
-              typeof error?.response?.data?.message === "string"
-                ? error?.response?.data?.message
-                : "Something went wrong, refresh browser or contact support",
-            isURL: false,
-            URL: ``,
-            isTimer: false,
-            isNavigation: false,
-            timer: timerDuration ? timerDuration : "3000",
-            isRevalidate: isSuccessNotification?.isRevalidate,
-            isRevaliddateURL: isSuccessNotification?.isRevaliddateURL,
-          });
-        } else return;
-      } else if (httpMethod !== "get") {
-       throw notify({
-          notificationText: "something went wrong",
-          isURL: false,
-          URL: ``,
-          isTimer: false,
-          isNavigation: false,
-          timer: timerDuration ? timerDuration : "3000",
-          isRevalidate: isSuccessNotification?.isRevalidate,
-          isRevaliddateURL: isSuccessNotification?.isRevaliddateURL,
-        });
-      } else throw error;
+    // Show success notification if enabled
+    if (isSuccessNotification?.notificationState && httpMethod !== "get") {
+      notify({
+        notificationText:
+          isSuccessNotification?.notificationText || "Success",
+        isURL: isSuccessNotification?.isURL || false,
+        URL: isSuccessNotification?.URL || "",
+        isTimer: isSuccessNotification?.isTimer ?? true,
+        timer: timerDuration ?? "3000",
+        bgColour: isSuccessNotification?.bgColour,
+        isNavigation: isSuccessNotification?.isNavigation ?? true,
+        isRevalidate: isSuccessNotification?.isRevalidate,
+        isRevaliddateURL: isSuccessNotification?.isRevaliddateURL,
+      });
     }
-  };
+    dispatch({ type: "ISLOADING_END" });
+    return res.data as errorResponse;
+  } catch (error) {
+    dispatch({ type: "ISLOADING_END" });
+
+    let message = "Something went wrong, refresh browser or contact support";
+
+    if (error instanceof AxiosError) {
+      message =
+        typeof error?.response?.data?.message === "string"
+          ? error.response.data.message
+          : message;
+    } else if (error instanceof Error) {
+      message = error.message;
+    }
+
+    //  Show error notification
+    notify({
+      notificationText: message,
+      isURL: false,
+      URL: "",
+      isTimer: false,
+      isNavigation: false,
+      timer: timerDuration ?? "3000",
+      isRevalidate: isSuccessNotification?.isRevalidate,
+      isRevaliddateURL: isSuccessNotification?.isRevaliddateURL,
+    });
+
+    //  Throw actual error object
+    throw new Error(message);
+  }
+};
 
   return {
     fetchIt,
