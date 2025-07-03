@@ -57,6 +57,7 @@ export const useHttpFetcher = () => {
     dispatch({ type: "ISLOADING_END" });
 
     let message = "Something went wrong, refresh browser or contact support";
+    console.log("Error in fetchIt:", message, error);
 
     if (error instanceof AxiosError) {
       message =
