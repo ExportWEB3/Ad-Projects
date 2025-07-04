@@ -93,7 +93,7 @@ export function DashboardComponent() {
          className='text-2xl cursor-pointer'
           />
 
-          <img src="" onClick={() => navigate('/register')} className='w-7 h-7 rounded-full bg-gray-400' />
+          <img src="" onClick={() => navigate('/login')} className='w-7 h-7 rounded-full bg-gray-400' />
         </div>
 
 

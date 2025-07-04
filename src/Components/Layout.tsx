@@ -9,14 +9,12 @@ export function LayoutComponent({ children }: layoutAttributes) {
   const { state, dispatch } = useContext(GlobalUseContext);
   const [isOnline, setIsOnline] = useState<boolean>(false);
 
-  useEffect(() => {
-    const findUser = localStorage.getItem("onlineId");
-    if (findUser) {
-      setIsOnline(true);
-    } else {
-      setIsOnline(false);
-    }
-  }, [state?.user?.email]);
+useEffect(() => {
+  const findUser = localStorage.getItem("onlineId");
+  setIsOnline(!!findUser);
+}, [state?.user]); 
+
+
 
   return (
     <div className="width100 height100 flex flex-column">

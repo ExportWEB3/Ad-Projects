@@ -1,22 +1,170 @@
-/* ...existing code... */
-@media (max-width: 768px) and (min-width: 320px) {
+/* ========== Base Responsive Breakpoints ========== */
+
+/* Small devices (phones, 320px - 480px) */
+@media screen and (max-width: 480px) {
   .login-signin-heading {
+    font-size: 28px !important;
+    margin-top: 32px !important;
     text-align: center !important;
-    font-size: 30px !important;
-    margin-top: 2.5rem !important;
   }
-  .mobileX{
-    margin-top: -30px !important;
+
+  .mobileX {
+    margin-top: -28px !important;
+    font-size: 14px !important;
   }
-  .mobileF{
-    margin-top: 30px !important;
+
+  .mobileF {
+    margin-top: 24px !important;
+    font-size: 14px !important;
   }
-  .mobileSignIn{
-    margin-top: 50px !important;
-    margin-bottom: 10px !important;
+
+  .mobileSignIn {
+    margin-top: 40px !important;
+    margin-bottom: 12px !important;
   }
-  .mobileLowTxt{
-    margin-top: 15px !important;
+
+   .forgotP{
+    margin-top: -25px !important;
+  }
+
+  .mobileLowTxt {
+    font-size: 12px !important;
+    margin-top: 16px !important;
+    padding: 0 8px !important;
+  }
+
+  .text-root {
+    font-size: 24px !important;
+  }
+
+  .w-full.h-screen.flex {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  .w-full.h-screen.flex > img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+  }
+
+  .w-1\/2.h-full.p-10 {
+    width: 100% !important;
+    padding: 24px !important;
+  }
+
+  .absolute.right-3.top-36 {
+    top: 136px !important;
+  }
+
+  .text-gray-800.font-semibold.absolute.right-3 {
+    top: 176px !important;
+    font-size: 13.6px !important;
   }
 }
-/* ...existing code... */
+
+/* Medium devices (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .login-signin-heading {
+    font-size: 32px !important;
+    margin-top: 40px !important;
+    text-align: center !important;
+  }
+
+  .mobileX {
+    margin-top: -32px !important;
+    font-size: 16px !important;
+  }
+
+  .mobileF {
+    margin-top: 32px !important;
+    font-size: 16px !important;
+  }
+
+  .mobileSignIn {
+    margin-top: 48px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .forgotP{
+    margin-top: -30px !important;
+  }
+  .mobileLowTxt {
+    font-size: 14px !important;
+    margin-top: 20px !important;
+    padding: 0 16px !important;
+  }
+
+  .w-full.h-screen.flex {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  .w-full.h-screen.flex > img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+  }
+
+  .w-1\/2.h-full.p-10 {
+    width: 100% !important;
+    padding: 32px !important;
+  }
+
+  .absolute.right-3.top-36 {
+    top: 152px !important;
+  }
+
+  .text-gray-800.font-semibold.absolute.right-3 {
+    top: 192px !important;
+  }
+}
+
+/* Tablet to small desktop (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .w-1\/2.h-full.p-10 {
+    padding: 48px !important;
+  }
+
+  .login-signin-heading {
+    font-size: 36px !important;
+    margin-top: 40px !important;
+  }
+
+  .mobileLowTxt {
+    font-size: 14px !important;
+  }
+
+  .mobileSignIn{
+    margin-top: 50px !important;
+  }
+}
+
+/* Custom breakpoint: Hide image below 1000px */
+@media screen and (max-width: 1000px) {
+  .hidden-below-1000 {
+    display: none !important;
+  }
+
+  .w-1\/2.h-full.p-10 {
+    width: 100% !important;
+  }
+}
+
+/* Prevent horizontal overflow */
+html, body {
+  width: 100%;
+  overflow-x: hidden !important;
+}
+
+/* Ensure no children break layout */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Optional: Tailwind containers override (if used) */
+.container {
+  max-width: 100% !important;
+  overflow-x: hidden;
+}

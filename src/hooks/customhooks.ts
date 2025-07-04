@@ -11,36 +11,36 @@ export const useHttpFetcher = () => {
   const { notify } = useNotificationHook();
   const axiosPrivate = useAxiosPrivate();
 
-  const fetchIt = async (params: globalHTTPReqFuncAttributes) => {
-    const {
-      apiEndPoint,
-      httpMethod,
-      reqData,
-      isSuccessNotification,
-      timerDuration,
-      contypeType,
-      responseType,
-    } = params;
+const fetchIt = async (params: globalHTTPReqFuncAttributes): Promise<errorResponse> => {
+  const {
+    apiEndPoint,
+    httpMethod,
+    reqData,
+    isSuccessNotification,
+    timerDuration,
+    contypeType,
+    responseType,
+  } = params;
 
-    dispatch({type: 'ISLOADING_START'})
-    try {
-      const res = await axiosPrivate({
-        method: httpMethod,
-        url: `/${apiEndPoint}`,
-        data: reqData,
-        withCredentials: true,
-        responseType: responseType,
-        headers: {
-          "Content-Type": contypeType ? contypeType : "application/json",
-          authorization: `Bearer ${state?.accessToken}`,
-        },
-      });
+  dispatch({ type: 'ISLOADING_START' });
 
-    // Show success notification if enabled
+  try {
+    const res = await axiosPrivate({
+      method: httpMethod,
+      url: `/${apiEndPoint}`,
+      data: reqData,
+      withCredentials: true,
+      responseType: responseType,
+      headers: {
+        "Content-Type": contypeType ?? "application/json",
+        authorization: `Bearer ${state?.accessToken}`,
+      },
+    });
+
+    // Show success toast if required
     if (isSuccessNotification?.notificationState && httpMethod !== "get") {
       notify({
-        notificationText:
-          isSuccessNotification?.notificationText || "Success",
+        notificationText: isSuccessNotification?.notificationText || "Success",
         isURL: isSuccessNotification?.isURL || false,
         URL: isSuccessNotification?.URL || "",
         isTimer: isSuccessNotification?.isTimer ?? true,
@@ -51,43 +51,45 @@ export const useHttpFetcher = () => {
         isRevaliddateURL: isSuccessNotification?.isRevaliddateURL,
       });
     }
+
     dispatch({ type: "ISLOADING_END" });
     return res.data as errorResponse;
-  } catch (error) {
-    dispatch({ type: "ISLOADING_END" });
 
-    let message = "Something went wrong, refresh browser or contact support";
-    console.log("Error in fetchIt:", message, error);
+} catch (error) {
+  dispatch({ type: "ISLOADING_END" });
 
-    if (error instanceof AxiosError) {
-      message =
-        typeof error?.response?.data?.message === "string"
-          ? error.response.data.message
-          : message;
-    } else if (error instanceof Error) {
-      message = error.message;
-    }
+  let message = "Something went wrong, refresh browser or contact support";
 
-    //  Show error notification
-    notify({
-      notificationText: message,
-      isURL: false,
-      URL: "",
-      isTimer: false,
-      isNavigation: false,
-      timer: timerDuration ?? "3000",
-      isRevalidate: isSuccessNotification?.isRevalidate,
-      isRevaliddateURL: isSuccessNotification?.isRevaliddateURL,
-    });
+  if (error instanceof AxiosError) {
+    message = typeof error?.response?.data?.message === "string"
+      ? error.response.data.message
+      : message;
 
-    //  Throw actual error object
-    throw new Error(message);
+    // ✅ Throw the real AxiosError so caller can read status, payload, etc.
+    throw error;
   }
-};
 
+  if (error instanceof Error) {
+    message = error.message;
+  }
+
+  notify({
+    notificationText: message,
+    isURL: false,
+    URL: "",
+    isTimer: false,
+    isNavigation: false,
+    timer: timerDuration ?? "3000",
+    isRevalidate: isSuccessNotification?.isRevalidate,
+    isRevaliddateURL: isSuccessNotification?.isRevaliddateURL,
+  });
+
+  throw error; // ✅ throw full error again
+}
+};
   return {
-    fetchIt,
-  };
+    fetchIt
+  }
 };
 
 export const useSWRHook = (props: {

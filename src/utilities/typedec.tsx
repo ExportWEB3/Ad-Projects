@@ -206,10 +206,20 @@ export interface clientResponseAttributes {
   status?: errorStatusCodes;
 }
 
-export interface errorResponse{
-    status: errorStatusCodes;
-    message: string;
-    payload?: unknown;
+export interface errorResponse {
+  status: number;
+  text: string;
+  payload?: unknown;
 }
 
+
 export type errorStatusCodes = 500 | 501 | 401 | 402 | 404 | 200 | number;
+
+export type LoginResponse = {
+  status: number;
+  text: string;
+  payload: {
+    _id: string;
+    responseData: unknown;
+  };
+};

@@ -128,7 +128,6 @@ export function OtpComponent () {
                     notificationState: false,
                 }
             });
-            setLoading(false);
             dispatch({
                 type: "SET_TOAST",
                 payload: {
