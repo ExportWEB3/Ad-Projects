@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import "./header.css"
 import { Button } from '../Button/button'
 import { useNavigate } from 'react-router-dom';
+import logoImg from '../../Images/Logo.png'
 
 export function HeaderComponent () {
     const [openDropdown, setOpenDropdown] = React.useState<string | null>(null);
@@ -33,7 +34,7 @@ export function HeaderComponent () {
         <header className="customContainer w-full h-14 border-b-2 flex bg-white fixed z-10 top-0 left-0">
             {/* Desktop Nav */}
             <div className="w-3/4 h-full items-center justify-center hidden lg:flex">
-                <img src="/src/Images/Logo.png" className="w-16 hover:w-20 "/>
+                <img src={logoImg} className="w-16 hover:w-20 "/>
                 <div className='h-full w-4/5 flex items-center ml-20 space-x-10' ref={dropdownRef}>
                     {/* Pricing Dropdown */}
                     <div className="relative">
@@ -57,7 +58,7 @@ export function HeaderComponent () {
                             </svg>
                         </div>
                         <div
-                            className={`absolute top-8 left-0 w-40 bg-white border rounded shadow-lg transition-all duration-300 ease-in-out ${openDropdown === 'Pricing' ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0'} overflow-hidden`}
+                            className={`absolute top-8 left-0 w-80 bg-white border rounded shadow-lg transition-all duration-300 ease-in-out ${openDropdown === 'Pricing' ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0'} overflow-hidden`}
                         >
                             <ul>
                                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Plan 1</li>
@@ -144,7 +145,7 @@ export function HeaderComponent () {
             </div>
             {/* Mobile Nav */}
             <div className="w-full flex lg:hidden items-center justify-between px-4 h-14">
-                <img src="/src/Images/Logo.png" className="w-14"/>
+                <img src={logoImg} className="w-14"/>
                 <button className="focus:outline-none" onClick={handleMobileMenu} aria-label="Open menu">
                     <svg className="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />

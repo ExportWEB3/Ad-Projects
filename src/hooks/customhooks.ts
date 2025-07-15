@@ -24,10 +24,15 @@ const fetchIt = async (params: globalHTTPReqFuncAttributes): Promise<errorRespon
 
   dispatch({ type: 'ISLOADING_START' });
 
+  console.log("Base URL:", import.meta.env.VITE_API_URL);
+console.log("Final URL:", `${import.meta.env.VITE_API_URL}/auth/login`);
+
+
   try {
+    const baseUrl = import.meta.env.VITE_API_URL;
     const res = await axiosPrivate({
       method: httpMethod,
-      url: `/${apiEndPoint}`,
+      url: `${baseUrl}/${apiEndPoint}`,
       data: reqData,
       withCredentials: true,
       responseType: responseType,

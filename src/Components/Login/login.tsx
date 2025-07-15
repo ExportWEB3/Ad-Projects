@@ -6,6 +6,7 @@ import { loginAttributes, LoginResponse, userAttributes } from '../../utilities/
 import { Input } from '../Input/Input.component';
 import { Button } from '../Button/button';
 import { useHttpFetcher } from '../../hooks/customhooks';
+import loginImg from '../../Images/login.png'
 
 export function LoginComponent() {
     const { dispatch } = useContext(GlobalUseContext);
@@ -169,7 +170,7 @@ const handleLogin = async () => {
 
     return (
         <div className='w-full h-screen flex'>
-            <img src="\src\Images\login.png" className="hidden-below-1000 w-2/3" />
+            <img src={loginImg} className="hidden-below-1000 w-2/3" />
             <div className='w-1/2 h-full p-10'>
                 <h1 className='text-root font-bold text-4xl mt-10 login-signin-heading'>Sign in</h1>
 

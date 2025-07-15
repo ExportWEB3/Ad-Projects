@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+  base: "/Ad-Projects/",
   plugins: [react()],
   server: {
     host: true,
@@ -10,6 +11,6 @@ export default defineConfig({
     watch: {
       usePolling: true,
     },
-    allowedHosts: ['.ngrok-free.app'], // <-- Add this line
+    allowedHosts: ['.ngrok-free.app'], // optional for backend dev tunneling
   },
 });

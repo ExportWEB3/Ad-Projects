@@ -1,6 +1,7 @@
 import { BackgroundBlurComponent } from "./background.ui";
 import { Player } from '@lottiefiles/react-lottie-player';
 import { useEffect, useState } from "react";
+import loadingImg from '../../../public/images/loading.json'
 
 export function SpinnerComponent (){
     const [visible, setVisible] = useState(true);
@@ -15,7 +16,7 @@ export function SpinnerComponent (){
                 <Player
                     autoplay
                     loop
-                    src="/images/loading.json"
+                    src={loadingImg}
                     style={{ height: '120px', width: '120px' }}
                 />
             </div>

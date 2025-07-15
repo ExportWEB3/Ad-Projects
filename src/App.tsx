@@ -13,7 +13,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Ad-Projects/">
       <Routes>
         <Route index path="/" element={<LandingPage />} />
         <Route path="/register" element={<RegisterPage />} />

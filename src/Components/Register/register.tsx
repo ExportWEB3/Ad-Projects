@@ -8,6 +8,8 @@ import { errorResponse, userAttributes } from '../../utilities/typedec';
 import { Icon } from '../Icon.component/Icon';
 import { Button } from '../Button/button';
 import { useHttpFetcher } from '../../hooks/customhooks';
+import registerImage from '../../Images/registerPag.png';
+
 
 export function RegisterComponent () {
     const navigate = useNavigate();
@@ -159,10 +161,25 @@ export function RegisterComponent () {
     };
 
     return (
-        <div className='w-full h-screen flex relative '>
+<div className="w-screen h-screen flex flex-col md:flex-row overflow-hidden">
             {/* Background image for mobile */}
-            <img src="/src/Images/registerPag.png" className="hidden md:block h-full w-1/3 object-cover" />
-            <img src="/src/Images/registerPag.png" className="block md:hidden absolute inset-0 w-full h-full object-cover opacity-30 z-0" style={{ pointerEvents: 'none' }} />
+            <div className='w-2/6 h-full bg-slate-600'>
+                 {/* Background image for desktop */}
+  <img
+    src={registerImage}
+    className="hidden md:block md:h-screen w-full object-cover"
+    alt="register"
+  />
+
+  {/* Background image for mobile */}
+  <img
+    src={registerImage}
+    className="block md:hidden absolute inset-0 w-full h-full object-cover opacity-30 z-0"
+    alt="register"
+    style={{ pointerEvents: 'none' }}
+  /> 
+            </div>
+
             {/* Content */}
             <div className='w-full md:w-8/12 h-full p-4 md:p-20 flex items-center justify-center absolute md:static top-0 left-0 overflow-y-auto'>
                 <div className='w-full md:w-w48 bg-white mt-40 register-container md:bg-opacity-100 rounded-xl md:rounded-none p-6 md:p-0 shadow-lg md:shadow-none h-full md:h-auto'>

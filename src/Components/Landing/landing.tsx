@@ -8,6 +8,31 @@ import { Input } from '../Input/Input.component';
 import { Footer } from '../footer/footer';
 import { HeaderComponent } from '../Header/header';
 import { useNavigate } from 'react-router-dom';
+import socialImg from '../../Images/Social.png';
+import jetBlueImg from '../../Images/JetBlue.png';
+import uniOfChiImg from '../../Images/UniOfChi.png';
+import uHaulImg from '../../Images/UHaul.png';
+import adobeImg from '../../Images/Adobe.png';
+import ikeaImg from '../../Images/ikea.png';
+import obarChartImg from '../../Images/obarchart.png';
+import logoImg from '../../Images/Logo.png';
+import woodBuffaloImg from '../../Images/wood-buffalo.png';
+import midImg from '../../Images/mid.png';
+import scheduleImg from '../../Images/schedule.png';
+import reportImg from '../../Images/report.jpg';
+import messageSendImg from '../../Images/message-send.png';
+import suspendPostsImg from '../../Images/suspend-posts.png';
+import metricImg from '../../Images/metric.png';
+import logoxImg from '../../Images/logox.png';
+import starsImg from '../../Images/stars.png';
+import pluginImg from '../../Images/plugin.png';
+import bagsImg from '../../Images/bags.png';
+import cloudImg from '../../Images/cloud.png';
+import awardImg from '../../Images/award.png';
+import lastPicImg from '../../Images/lastPic.png';
+import appStoreImg from '../../Images/d on appstore.png';
+import googlePlayImg from '../../Images/get it on google play.webp';
+
 
 
 export function LandingComponent() {
@@ -55,9 +80,9 @@ const next = () => {
     return  (
       <>
       <HeaderComponent />
-       <div className="w-full h-full flex mt-20 customContainerModified items-center flex-col">
-            <div className='w-full h-full flex items-center'>
-            <img src="\src\Images\Social.png" className="social" alt="" />
+       <div className="w-full h-full flex mt-20 customContainerModified items-center flex-col overflow-hidden">
+            <div className='w-full h-full flex items-center overflow-hidden'>
+<img src={socialImg} className="social" alt="" />
             <div className='w-1/2 h-80 ml-16'>
             <h1 className='font-bold fontR font-root wordSpacing text-gray-800 hero-title'>Save time and get REAL</h1>
             <h1 className='font-bold fontR font-root wordSpacing text-gray-800 hero-title'>results on social media.</h1>
@@ -76,11 +101,11 @@ const next = () => {
             </div>
 
             <div className='w-full h-40 mt-5 flex items-center space-x-28 brand-logos-row'>
-                <img src="\src\Images\JetBlue.png" className='w-40 opacity-50 grayscale' />
-                <img src="\src\Images\UniOfChi.png" className='w-40 opacity-50 grayscale' />
-                <img src="\src\Images\UHaul.png" className='w-40 opacity-50 grayscale' />
-                <img src="\src\Images\Adobe.png" className='w-40 opacity-50 grayscale' />
-                <img src="\src\Images\ikea.png" className='w-40 grayscale' />
+<img src={jetBlueImg} className='w-40 opacity-50 grayscale' />
+<img src={uniOfChiImg} className='w-40 opacity-50 grayscale' />
+<img src={uHaulImg} className='w-40 opacity-50 grayscale' />
+<img src={adobeImg} className='w-40 opacity-50 grayscale' />
+<img src={ikeaImg} className='w-40 grayscale' />
             </div>
 
             <div className='w-full h-40 mt-5 flex flex-col items-center justify-center space-y-5 fade-up'>
@@ -112,7 +137,7 @@ const next = () => {
                 </div>
 
                 <div className='w-1/2 h-full flex flex-col items-center fade-up'>
-                <img src="\src\Images\obarchart.png" className='rounded-xl w-full'/>
+<img src={obarChartImg} className='rounded-xl w-full'/>
                 </div>
 
             </div>
@@ -123,7 +148,7 @@ const next = () => {
                     <div className='w-1/3 h-full flex flex-col items-center space-y-10 midInfo2-col'>
                     <h1 className='text-7xl font-bold text-red-500'>80%</h1>
                     <p className='text-xl text-center font-root text-gray-800'>reduction in workload using Tildette's chatbot capabilities</p>
-                    <img src="\src\Images\Logo.png" className='w-40 grayscale '/>
+<img src={logoImg} className='w-40 grayscale '/>
                     </div>
 
                     <hr className='h-full w-px bg-gray-400 mx-4 midInfo2-hr'/>
@@ -131,7 +156,7 @@ const next = () => {
                     <div className='w-1/3 h-full flex flex-col items-center space-y-10 fade-up midInfo2-col'>
                     <h1 className='text-7xl font-bold text-red-500'>500%</h1>
                     <p className='text-xl text-center font-root text-gray-800'>growth across all social channels using Tildette Enterprise</p>
-                    <img src="\src\Images\wood-buffalo.png" className='w-44 grayscale'/>
+<img src={woodBuffaloImg} className='w-44 grayscale'/>
                     </div>
 
                     <hr className='h-full w-px bg-gray-400 mx-4 midInfo2-hr'/>
@@ -140,7 +165,7 @@ const next = () => {
                     <h1 className='text-7xl font-bold text-red-500'>2M+</h1>
                     <p className='text-xl text-center font-root text-gray-800'>new followers on social media using Tildette Enterprise
                     </p>
-                    <img src="\src\Images\Logo.png" className='w-40 grayscale'/>
+<img src={logoImg} className='w-40 grayscale'/>
                     </div>
                 </div>
             </div>
@@ -163,7 +188,7 @@ const next = () => {
 
                     >x</Button>
                 </div>
-                <img src="\src\Images\mid.png" className='w-1/2 rounded-md ' />
+<img src={midImg} className='w-1/2 rounded-md ' />
             </div>
 
             <div className='w-full h-40 mt-28 flex flex-col items-center justify-center space-y-5 fade-up feature-section'>
@@ -175,7 +200,7 @@ const next = () => {
 
             <div className='w-full h-80 flex space-x-10 mt-14 fade-up feature-section'>
                 <div className='w-1/2 h-full bg-gray-400 rounded-lg' >
-                <img src="\src\Images\schedule.png" className='w-full' />
+<img src={scheduleImg} className='w-full' />
                 </div>
 
                 <div className='w-1/2 h-full space-y-8'>
@@ -219,13 +244,13 @@ const next = () => {
                 </div>
 
                 <div className='w-1/2 h-full overflow-hidden' >
-                <img src="\src\Images\report.jpg" className='w-full rounded-lg' />
+<img src={reportImg} className='w-full rounded-lg' />
                 </div>
             </div>
 
             <div className='w-full h-80 mt-36 space-x-10 flex fade-up feature-section'>
                 <div className='w-1/2 h-full' >
-                <img src="\src\Images\message-send.png" className='w-full rounded-lg' />
+<img src={messageSendImg} className='w-full rounded-lg' />
                 </div>
 
                 <div className='w-1/2 h-full space-y-8'>
@@ -269,13 +294,13 @@ const next = () => {
                 </div>
 
                 <div className='w-1/2 h-full' >
-                <img src="\src\Images\suspend-posts.png" className='w-full rounded-lg' />
+<img src={suspendPostsImg} className='w-full rounded-lg' />
                 </div>
             </div>
 
             <div className='w-full h-80 mt-36 space-x-10 flex fade-up feature-section'>
                 <div className='w-1/2 h-full' >
-                <img src="\src\Images\metric.png" className='w-full rounded-lg' />
+<img src={metricImg} className='w-full rounded-lg' />
                 </div>
 
                 <div className='w-1/2 h-full space-y-8'>
@@ -308,7 +333,7 @@ const next = () => {
 
             <div className='w-full hPx flex space-x-10 overflow-hidden fade-up'>
                 <div className='w-1/3 h-full flex flex-col items-center  space-y-5'>
-                <img src="\src\Images\logox.png" className='w-40 grayscale' />           
+<img src={logoxImg} className='w-40 grayscale' />
                 <h1 className='text-3xl font-bold text-gray-800 font-root'>17 years and 25 million users</h1>
                 <p className='text-xl text-gray-800 font-root text-center'>Tildette was the first, and we’re still the most popular 17 years later. Over 25 million users have used Tildette to post, track, and out-perform their competitors on social media.</p>
                     <Button
@@ -319,7 +344,7 @@ const next = () => {
                 </div>
 
                 <div className='w-1/3 h-full flex flex-col items-center  space-y-5 mt-5 fade-up'>
-                <img src="\src\Images\stars.png" className='w-44 grayscale' />           
+<img src={starsImg} className='w-44 grayscale' />
                 <h1 className='text-4xl font-bold text-gray-800 font-root text-center'>The ultimate social media AI</h1>
                 <p className='text-xl text-gray-800 font-root text-center'>Tildette helps you automate every part of social media management — posting, writing, messaging, and social listening. 
                     Our AI was designed by social pros for social pros.</p>
@@ -331,7 +356,7 @@ const next = () => {
                 </div>
 
                 <div className='w-1/3 h-full flex flex-col items-center  space-y-5 mt-5 fade-up'>
-                <img src="\src\Images\plugin.png" className='w-40 grayscale' />           
+<img src={pluginImg} className='w-40 grayscale' />
                 <h1 className='text-4xl font-bold text-gray-800 font-root text-center'>The ultimate social media AI</h1>
                 <p className='text-xl text-gray-800 font-root text-center'>Connect over 100 integrations to bring all your favorite tools into the Tildette dashboard. 
                     That’s more than any other social media management platform (by far).</p>
@@ -347,7 +372,7 @@ const next = () => {
                 <h1 className='text-5xl text-gray-800 font-root font-bold reasons-header'>Reasons for social media Pros</h1>
                 <div className='w-full h-full flex space-x-10 mt-10 feature-section-cards fade-up'>
                   <div className='w-1/3 h-full space-y-2 feature-card fade-up'>
-                    <img src="\src\Images\bags.png"/>
+<img src={bagsImg} />
                     <h1 className='text-3xl font-bold text-gray-800 font-root'>How a retail brand used Tildette to increase sales by 750%</h1>
                     <p className='text-base text-gray-800 font-semibold'>See how legendary candy-maker Stuckey’s leveraged Tildette Professional to skyrocket their online sales and following.</p>
                     <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold'>Read more <span>
@@ -359,7 +384,7 @@ const next = () => {
                     </p>
                   </div>
                   <div className='w-1/3 h-full space-y-2 feature-card fade-up'>
-                    <img src="\src\Images\cloud.png"/>
+<img src={cloudImg} />
                     <h1 className='text-3xl font-bold text-gray-800 font-root'>8 social media competitor analysis tools to help you get ahead</h1>
                     <p className='text-base text-gray-800 font-semibold'>Find out how to beat the competition with the right social media competitor analysis tools. Get the scoop on the Tildette blog.</p>
                     <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer font-semibold'>Read more <span>
@@ -371,7 +396,7 @@ const next = () => {
                     </p>
                   </div>
                   <div className='w-1/3 h-full bg-white space-y-2 feature-card fade-up'>
-                    <img src="\src\Images\award.png"/>
+<img src={awardImg} />
                     <h1 className='text-3xl font-bold text-gray-800 font-root'>Take the Tildette Social Media Marketing Certification Course</h1>
                     <p className='text-base text-gray-800 font-semibold'>Become a social media expert — and slap a shiny new certification on your resumé — with the industry standard in social media education.</p>
                     <p className='underline hover:no-underline text-gray-800 hover:text-blue-800 cursor-pointer' onClick={() => navigateWithScroll('/register')}>Sign Up Now <span>
@@ -440,7 +465,7 @@ const next = () => {
             
 
             <div className='w-full h-96 mt-14 bg-gray-100 px-5 space-x-5 items-center flex fade-up'>
-              <img src="\src\Images\lastPic.png" className='' />
+<img src={lastPicImg} className='' />
               <div className='w-1/2 h-80 flex flex-col space-y-10'>
               <h1 className='text-4xl font-semibold font-root text-gray-800'>Try Tildette for free. No strings attached.</h1>
               <p className='text-xl font-medium font-root text-gray-800 '>With your free Tildette trial, you get instant access to social media scheduling, analytics, messaging, and social listening. Completely free.</p>
@@ -457,7 +482,7 @@ const next = () => {
             </div>
 
 
-            <div className='w-screen lastDiv flex flex-col bg-gray-100 mt-20 items-center newsletter-section fade-up'>
+            <div className='w-full lastDiv flex flex-col bg--100 mt-20 items-center newsletter-section fade-up'>
               <div className='w-2/3 h-80 mt-20 flex fade-up newsletter-content'>
               <div className='w-w40 h-full'>
                 <h1 className='text-4xl font-root text-gray-800 font-bold newsletter-title'><a className='text-5xl font-root text-red-600'>The Perch</a> newsletter: Get smarter about social.</h1>
@@ -479,7 +504,7 @@ const next = () => {
                >x</Button>
               </div>
               </div>
-              <hr className='w-2/3 lastLine bg-black opacity-40'/>
+              <hr className='w-2/3 lastLine bg-black mt-10 opacity-40'/>
 
             
             <div className='w-2/3 h-1/2 bg-gray-20 mt-10 flex fade-up footer-links-section'>
@@ -511,11 +536,13 @@ const next = () => {
             </div>
 
             <div className='w-48 h-48 flex flex-col space-y-5 appstore-imgs fade-up'>
-              <img src="\src\Images\d on appstore.png" className='cursor-pointer appstore-img'/>
-              <img src="\src\Images\get it on google play.webp" className='cursor-pointer appstore-img'/>
+
+<img src={appStoreImg} className='cursor-pointer appstore-img'/>
+<img src={googlePlayImg} className='cursor-pointer appstore-img'/>
+
             </div>
           </div>
-          <hr className='w-full lastLine bg-black -mt-20 opacity-50' />
+          <hr className='w-full lastLine bg-black opacity-70' />
 
               <Footer />
 

@@ -190,7 +190,6 @@ export function OtpComponent () {
                             type="button"
                             btnText="Verify"
                             className="w-20 h-full bg-gray-900 text-white hover:bg-blue-900 transition-colors duration-300"
-                            disabled={loading}
                             onClick={handleVerifyOtp}
                         >Verify</Button>
                     </div>
